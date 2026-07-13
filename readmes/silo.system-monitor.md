@@ -1,15 +1,30 @@
 # System Monitor
 
-A [Silo](https://github.com/silo-code/silo) extension that keeps CPU and memory usage visible at a glance — without leaving your editor. Works on **macOS, Linux, and Windows**.
+A [Silo](https://github.com/silo-code/silo) extension that keeps CPU, memory, and per-terminal process activity visible at a glance — without leaving your editor. Works on **macOS, Linux, and Windows**.
 
-![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.2.3/system-monitor/assets/screenshot.png)
+![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.2.4/system-monitor/assets/screenshot.png)
 
 ## What you get
 
-- **Side panel** — a dedicated SYSTEM tab with a memory donut chart and a scrolling CPU history graph (User vs System split)
+- **Side panel** — a dedicated SYSTEM tab with a memory donut chart, a scrolling CPU history graph (User vs System split), and a live Processes list for the current workspace
 - **Status bar readouts** — compact live counters at the bottom of the window that stay visible even when the panel is closed
 - **Configurable** — choose which metrics appear, on which surfaces, and in what order via Settings or the in-panel gear icon
 - **Persistent settings** — your choices are saved across restarts and apply to all workspaces automatically
+
+## Processes
+
+The Processes section shows one row per terminal in the active workspace —
+its foreground program, live CPU/memory (rolled up across its child processes,
+so a busy build running under a shell doesn't read as idle), and idle/busy
+state. Expand a row to see the full process tree; click a title to jump to
+that terminal; hover a row for a one-click **kill** (with a confirmation) that
+terminates the process group but leaves the shell itself running.
+
+CPU/memory stats are opt-in and only sampled while the panel is visible and
+the section is enabled — closing the panel or disabling it in Settings stops
+the extra polling. Process trees (the expand/kill affordances) require `ps`
+and aren't available on Windows; the panel still shows each terminal's
+foreground program there.
 
 ## Cross-platform
 
