@@ -30,7 +30,15 @@ const versions = detail.versions ?? [];
         </div>
       </div>
       <aside>
-        <pre><code>silo install {id}</code></pre>
+        <div class="install-cmd">
+          <pre><code>silo install {id}</code></pre>
+          <button class="copy-btn" data-copy={`silo install ${id}`} title="Copy to clipboard" aria-label="Copy install command">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </div>
         <dl>
           <dt>Latest</dt>
           <dd>{latest ? `v${latest.version}` : "unreleased"}</dd>
@@ -96,14 +104,23 @@ const versions = detail.versions ?? [];
 </Layout>
 
 <style>
-  .ext-head { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start; }
+  .ext-head { display: grid; grid-template-columns: 1fr 380px; gap: 2rem; align-items: start; border-bottom: none; }
   @media (max-width: 720px) { .ext-head { grid-template-columns: 1fr; } }
   h1 { font-size: 1.6rem; margin: 0.25rem 0 0; }
   .ext-id { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); margin: 0.1rem 0 0.6rem; }
   .desc { color: var(--muted); }
   .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   aside { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
-  aside pre { margin: 0 0 0.75rem; }
+  .install-cmd { position: relative; margin: 0 0 0.75rem; }
+  aside pre { margin: 0; border: none; background: var(--bg); }
+  .copy-btn {
+    position: absolute; top: 50%; right: 0.5rem; transform: translateY(-50%);
+    background: none; border: none; cursor: pointer; color: var(--muted);
+    padding: 0.25rem; border-radius: 4px; display: flex; align-items: center;
+    transition: color 0.15s;
+  }
+  .copy-btn:hover { color: var(--text); }
+  .copy-btn.copied { color: var(--good); }
   dl { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin: 0; font-size: 0.88rem; }
   dt { color: var(--muted); }
   dd { margin: 0; }
@@ -113,9 +130,26 @@ const versions = detail.versions ?? [];
   }
   .advisory p { margin: 0.25rem 0 0; }
   .readme { border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem; overflow-x: auto; }
+  .readme :global(img) { max-width: 500px; max-height: 500px; }
   table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
   th, td { text-align: left; padding: 0.45rem 0.75rem 0.45rem 0; border-bottom: 1px solid var(--border); }
   th { color: var(--muted); font-weight: 500; }
   .sha { font-family: var(--mono); color: var(--muted); }
   .yanked td { opacity: 0.55; }
 </style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy ?? "";
+      await navigator.clipboard.writeText(text);
+      btn.classList.add("copied");
+      const original = btn.innerHTML;
+      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+      setTimeout(() => {
+        btn.innerHTML = original;
+        btn.classList.remove("copied");
+      }, 2000);
+    });
+  });
+</script>
