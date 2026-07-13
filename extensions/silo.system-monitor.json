@@ -1,7 +1,12 @@
 {
   "id": "silo.system-monitor",
   "repo": "silo-code/silo-extensions",
-  "description": "Live CPU and memory charts in a side panel and status bar — cross-platform (macOS, Linux, Windows).",
-  "categories": ["monitoring", "status-bar", "side-panel"],
-  "addedAt": "2026-07-13"
+  "description": "Live CPU and memory charts in a side panel and status bar \u2014 cross-platform (macOS, Linux, Windows).",
+  "categories": [
+    "monitoring",
+    "status-bar",
+    "side-panel"
+  ],
+  "addedAt": "2026-07-13",
+  "path": "system-monitor"
 }

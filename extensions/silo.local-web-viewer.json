@@ -2,6 +2,10 @@
   "id": "silo.local-web-viewer",
   "repo": "silo-code/silo-extensions",
   "description": "Embed local dev servers and file:// pages as dock panels alongside your code.",
-  "categories": ["webview", "productivity"],
-  "addedAt": "2026-07-13"
+  "categories": [
+    "webview",
+    "productivity"
+  ],
+  "addedAt": "2026-07-13",
+  "path": "local-web-viewer"
 }

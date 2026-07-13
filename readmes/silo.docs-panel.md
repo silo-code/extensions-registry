@@ -2,7 +2,7 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that adds a dedicated side panel for browsing and reading markdown documentation — rendered, not raw.
 
-![Docs panel showing a markdown file tree alongside a rendered preview](assets/screenshot.png)
+![Docs panel showing a markdown file tree alongside a rendered preview](https://raw.githubusercontent.com/silo-code/silo-extensions/docs-panel@v0.1.5/docs-panel/assets/screenshot.png)
 
 ## What you get
 

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { buildEntry, buildLlmsTxt } from "../scripts/build-index.js";
+import { buildEntry, buildLlmsTxt, titleFromId } from "../scripts/build-index.js";
 
 const reg = {
   id: "acme.weather",
@@ -12,6 +12,8 @@ const reg = {
 
 const version = (v, extra = {}) => ({
   version: v,
+  tag: `v${v}`,
+  name: null,
   tarballUrl: `https://example.com/${v}.tgz`,
   mirrorUrl: null,
   sha256: "abc",
@@ -39,6 +41,22 @@ test("buildEntry handles no versions and unavailable repos", () => {
   const entry = buildEntry(reg, { repoAvailable: false, unavailableSince: "2026-07-01T00:00:00Z", versions: [] });
   assert.equal(entry.status, "unavailable");
   assert.equal(entry.unavailableSince, "2026-07-01T00:00:00Z");
+});
+
+test("buildEntry prefers the manifest display name, falling back to a title-cased id", () => {
+  const withName = buildEntry(reg, { repoAvailable: true, versions: [version("1.0.0", { name: "Weather Pro" })] });
+  assert.equal(withName.name, "Weather Pro");
+
+  const withoutName = buildEntry(reg, { repoAvailable: true, versions: [version("1.0.0")] });
+  assert.equal(withoutName.name, "Weather");
+
+  assert.equal(buildEntry(reg, null).name, "Weather");
+});
+
+test("titleFromId title-cases the name segment", () => {
+  assert.equal(titleFromId("acme.weather"), "Weather");
+  assert.equal(titleFromId("silo.system-monitor"), "System Monitor");
+  assert.equal(titleFromId("silo.docs-panel"), "Docs Panel");
 });
 
 test("llms.txt lists each extension with permissions and links", () => {

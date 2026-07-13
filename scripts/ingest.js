@@ -11,6 +11,7 @@ import { join } from "node:path";
 import { downloadAsset, listReleases } from "./lib/github.js";
 import { compareSemver, permissionsWidened, validateManifest, versionFromTag } from "./lib/schema.js";
 import { readPackage, sha256 } from "./lib/tarball.js";
+import { rewriteReadmeMedia } from "./lib/readme.js";
 
 const root = new URL("..", import.meta.url).pathname;
 const config = JSON.parse(readFileSync(join(root, "registry.config.json"), "utf8"));
@@ -50,6 +51,9 @@ for (const file of readdirSync(join(root, "extensions")).sort()) {
   const versionsPath = join(root, "versions", `${reg.id}.json`);
   const record = readJson(versionsPath, { id: reg.id, repo: reg.repo, versions: [] });
   let changed = false;
+  // Buffers downloaded this run, keyed by version — avoids a second download
+  // when the top (newest) version is also newly ingested in this same pass.
+  const downloadedThisRun = new Map();
 
   let releases;
   try {
@@ -76,10 +80,16 @@ for (const file of readdirSync(join(root, "extensions")).sort()) {
 
     const existing = record.versions.find((v) => v.version === version);
     if (existing) {
-      // Only refresh the popularity signal; pinned fields are append-only.
+      // Only refresh the popularity signal and backfill fields added after
+      // this version was first ingested; the pinned integrity fields
+      // (sha256, tarballUrl, permissions, …) are append-only and never change.
       const count = asset?.download_count ?? existing.downloads;
       if (count !== existing.downloads) {
         existing.downloads = count;
+        changed = true;
+      }
+      if (!existing.tag) {
+        existing.tag = release.tag_name;
         changed = true;
       }
       continue;
@@ -107,9 +117,15 @@ for (const file of readdirSync(join(root, "extensions")).sort()) {
       const tmpPath = join(mkdirSync(join(tmpdir(), `ingest-${Date.now()}`), { recursive: true }), asset.name);
       writeFileSync(tmpPath, tgz);
       const latest = record.versions[0];
+      const displayName =
+        (typeof manifest.displayName === "string" && manifest.displayName.trim()) ||
+        (typeof manifest.name === "string" && manifest.name.trim()) ||
+        null;
 
       record.versions.push({
         version,
+        tag: release.tag_name,
+        name: displayName,
         tarballUrl: asset.browser_download_url,
         mirrorUrl: null,
         sha256: sha256(tgz),
@@ -123,12 +139,7 @@ for (const file of readdirSync(join(root, "extensions")).sort()) {
         yanked: null,
       });
       changed = true;
-
-      // README of the newest version wins.
-      if (readme && compareSemver(version, record.versions[0].version) >= 0) {
-        mkdirSync(join(root, "readmes"), { recursive: true });
-        writeFileSync(join(root, "readmes", `${reg.id}.md`), readme);
-      }
+      downloadedThisRun.set(version, { tgz, readme });
       console.log(`✓ ${reg.id}@${version} ingested (${tgz.length} bytes)`);
     } catch (err) {
       console.error(`✗ ${reg.id}@${version}: ${err.message}`);
@@ -137,6 +148,49 @@ for (const file of readdirSync(join(root, "extensions")).sort()) {
   }
 
   record.versions.sort((a, b) => compareSemver(b.version, a.version));
+
+  // README generation (media rewriting, display name) is a display concern,
+  // not an integrity one — unlike the fields above it's safe to regenerate on
+  // every run, so it self-heals if the rewrite logic changes or a field was
+  // missing from an older record, without touching the pinned version data.
+  const top = record.versions.find((v) => !v.yanked);
+  if (top) {
+    try {
+      let bytes = downloadedThisRun.get(top.version)?.tgz;
+      let readme = downloadedThisRun.get(top.version)?.readme;
+      if (bytes === undefined) {
+        bytes = await downloadAsset(top.tarballUrl, config.maxTarballBytes);
+        ({ readme } = readPackage(bytes));
+      }
+      if (!top.name) {
+        const { manifest } = readPackage(bytes);
+        top.name =
+          (typeof manifest.displayName === "string" && manifest.displayName.trim()) ||
+          (typeof manifest.name === "string" && manifest.name.trim()) ||
+          null;
+        changed = true;
+      }
+      // `top.tag` is set either just now (new version, above) or by the
+      // existing-version backfill earlier in this same loop — every release
+      // in `releases` is visited every run, so by this point every version
+      // still present in `releases` has a tag. It's only absent if the
+      // release itself vanished upstream, in which case there's no tag to
+      // build a raw/blob URL from and the README is left as last-written.
+      if (readme && top.tag) {
+        const rewritten = rewriteReadmeMedia(readme, {
+          repo: reg.repo,
+          tag: top.tag,
+          path: reg.path ?? "",
+        });
+        mkdirSync(join(root, "readmes"), { recursive: true });
+        writeFileSync(join(root, "readmes", `${reg.id}.md`), rewritten);
+      }
+    } catch (err) {
+      console.error(`✗ ${reg.id}: README refresh failed: ${err.message}`);
+      failures++;
+    }
+  }
+
   if (changed) {
     mkdirSync(join(root, "versions"), { recursive: true });
     writeFileSync(versionsPath, `${JSON.stringify(record, null, 2)}\n`);

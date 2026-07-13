@@ -2,7 +2,7 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps CPU and memory usage visible at a glance — without leaving your editor. Works on **macOS, Linux, and Windows**.
 
-![System Monitor panel showing memory donut chart and CPU history graph](assets/screenshot.png)
+![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.2.2/system-monitor/assets/screenshot.png)
 
 ## What you get
 

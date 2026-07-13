@@ -69,7 +69,17 @@ export function validateRegistration(reg, { filename, config }) {
     errors.push('addedAt must be a "YYYY-MM-DD" date');
   }
 
-  const known = new Set(["id", "repo", "description", "categories", "addedAt"]);
+  if (reg.path !== undefined) {
+    if (
+      typeof reg.path !== "string" ||
+      reg.path.startsWith("/") ||
+      reg.path.split("/").includes("..")
+    ) {
+      errors.push('path must be a relative subdirectory (no leading "/", no "..")');
+    }
+  }
+
+  const known = new Set(["id", "repo", "description", "categories", "addedAt", "path"]);
   for (const key of Object.keys(reg)) {
     if (!known.has(key)) errors.push(`unknown field "${key}"`);
   }

@@ -53,6 +53,21 @@ test("registration rejects squatting", () => {
   assert.ok(errors.some((e) => e.includes('publisher "microsoft"')));
 });
 
+test("registration accepts an optional path and rejects an unsafe one", () => {
+  assert.deepEqual(
+    validateRegistration({ ...goodReg, path: "weather" }, { filename: "acme.weather.json", config }),
+    [],
+  );
+  assert.ok(
+    validateRegistration({ ...goodReg, path: "/weather" }, { filename: "acme.weather.json", config })
+      .some((e) => e.includes("path must be")),
+  );
+  assert.ok(
+    validateRegistration({ ...goodReg, path: "../escape" }, { filename: "acme.weather.json", config })
+      .some((e) => e.includes("path must be")),
+  );
+});
+
 test("registration enforces filename, categories, unknown fields", () => {
   assert.ok(validateRegistration(goodReg, { filename: "wrong.json", config }).length > 0);
   assert.ok(

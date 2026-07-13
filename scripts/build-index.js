@@ -18,6 +18,16 @@ function readJson(path, fallback) {
   }
 }
 
+/** `acme.weather` → "Weather" — used only when no manifest displayName exists. */
+export function titleFromId(id) {
+  const segment = id.slice(id.indexOf(".") + 1);
+  return segment
+    .split(/[-_.]+/)
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 /** Pure: assemble the index entry for one extension. Exported for tests. */
 export function buildEntry(reg, record) {
   const versions = record?.versions ?? [];
@@ -25,6 +35,7 @@ export function buildEntry(reg, record) {
   const status = record?.repoAvailable === false ? "unavailable" : "active";
   return {
     id: reg.id,
+    name: latest?.name || titleFromId(reg.id),
     description: reg.description,
     categories: reg.categories,
     repo: reg.repo,
