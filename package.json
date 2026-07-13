@@ -1,0 +1,16 @@
+{
+  "name": "silo-extensions-registry",
+  "private": true,
+  "type": "module",
+  "description": "The Silo Extension Registry — git-backed static index of Silo extensions",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-registration.js",
+    "ingest": "node scripts/ingest.js",
+    "build": "node scripts/build-index.js"
+  }
+}

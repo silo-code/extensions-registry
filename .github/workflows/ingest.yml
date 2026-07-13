@@ -1,0 +1,40 @@
+name: ingest
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Space-separated extension ids to ingest (empty = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Ingest new releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/ingest.js ${{ inputs.ids }}
+      - name: Commit version records
+        run: |
+          git config user.name "silo-registry-bot"
+          git config user.email "registry-bot@getsilo.dev"
+          git add versions readmes
+          if ! git diff --cached --quiet; then
+            git commit -m "ingest: $(git diff --cached --name-only | grep -c versions/) record(s) updated"
+            git push
+          fi

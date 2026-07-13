@@ -1,0 +1,152 @@
+{
+  "id": "silo.github-actions",
+  "repo": "silo-code/silo-extensions",
+  "versions": [
+    {
+      "version": "0.1.9",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.9/silo-extensions-github-actions-0.1.9.tgz",
+      "mirrorUrl": null,
+      "sha256": "fe1d95981f2f4ea22b2237f17722ae990efa68795cafe4ed00f450179c419198",
+      "size": 20013,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-02T21:06:17Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
+      "version": "0.1.8",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.8/silo-extensions-github-actions-0.1.8.tgz",
+      "mirrorUrl": null,
+      "sha256": "86059d2e45b4f00df485aa123f39072fb8498de49b2280039c2e35f934ddb2a1",
+      "size": 19458,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-01T20:41:03Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.7",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.7/silo-extensions-github-actions-0.1.7.tgz",
+      "mirrorUrl": null,
+      "sha256": "711be35b3508d3b36bc9a111a05323bbce5d638373076072621f1a36d14f9332",
+      "size": 18156,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-01T20:26:42Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.6",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.6/silo-extensions-github-actions-0.1.6.tgz",
+      "mirrorUrl": null,
+      "sha256": "f45cf610fe9a8373672213dbb26a6fa01fc2b1ab7506c73b8476b7ad8d250edd",
+      "size": 17816,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-01T18:12:11Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
+      "version": "0.1.5",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.5/silo-extensions-github-actions-0.1.5.tgz",
+      "mirrorUrl": null,
+      "sha256": "130abc86bc464d901ff5177f3c888a0e2479c9b34b12e078ab789040a071c31e",
+      "size": 17852,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-30T18:10:52Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.4",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.4/silo-extensions-github-actions-0.1.4.tgz",
+      "mirrorUrl": null,
+      "sha256": "a30f99cf2fd5cc9239af2571be9ae59ff2f8b209be9a1009ba9b5b9ac1dca291",
+      "size": 17378,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-30T16:10:25Z",
+      "downloads": 2,
+      "yanked": null
+    },
+    {
+      "version": "0.1.3",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.3/silo-extensions-github-actions-0.1.3.tgz",
+      "mirrorUrl": null,
+      "sha256": "4a4c8efc4c16dd426422e2c284692d454d9deed657a8c6d1cf398e353846a72a",
+      "size": 16279,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-30T14:39:10Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
+      "version": "0.1.2",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.2/silo-extensions-github-actions-0.1.2.tgz",
+      "mirrorUrl": null,
+      "sha256": "486f6e9bb22d009f7e1e378b9d177610d08aa525358f6e3c731abf3195a716ec",
+      "size": 16071,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-30T14:15:22Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
+      "version": "0.1.1",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.1/silo-extensions-github-actions-0.1.1.tgz",
+      "mirrorUrl": null,
+      "sha256": "bd1a9fbe3ede46ccb831069da0000833b4174ea6fd8d225f63225a56af8959e8",
+      "size": 15784,
+      "engine": "^0.19.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-30T00:53:35Z",
+      "downloads": 3,
+      "yanked": null
+    }
+  ],
+  "repoAvailable": true,
+  "lastCheckedAt": "2026-07-13T15:12:33.803Z"
+}

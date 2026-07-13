@@ -1,0 +1,7 @@
+{
+  "id": "silo.github-actions",
+  "repo": "silo-code/silo-extensions",
+  "description": "Monitor GitHub Actions workflow runs across workspace repos — status bar, workspace badges, and failure notifications.",
+  "categories": ["integration", "monitoring", "status-bar"],
+  "addedAt": "2026-07-13"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "silo.system-monitor",
+  "repo": "silo-code/silo-extensions",
+  "versions": [
+    {
+      "version": "0.2.2",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.2.2/silo-extensions-system-monitor-0.2.2.tgz",
+      "mirrorUrl": null,
+      "sha256": "6bec03091ab4fd1bd6c598dae6492a89e6e22be789090479f499d8f641c61fd5",
+      "size": 13347,
+      "engine": "^0.17.0",
+      "permissions": [
+        "process",
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-02T13:48:15Z",
+      "downloads": 4,
+      "yanked": null
+    },
+    {
+      "version": "0.2.1",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.2.1/silo-extensions-system-monitor-0.2.1.tgz",
+      "mirrorUrl": null,
+      "sha256": "e50808398309e71ec94dc9236091f4249df144b8e653ea1fb12b62332f7cf474",
+      "size": 13348,
+      "engine": "^0.17.0",
+      "permissions": [
+        "process",
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-28T17:09:27Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.2",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.1.2/silo-extensions-system-monitor-0.1.2.tgz",
+      "mirrorUrl": null,
+      "sha256": "5904ea8d96c3beffe98fe56582cbb8b5ab260420c5110fff26e29d80b1f64f38",
+      "size": 11013,
+      "engine": "^0.15.0",
+      "permissions": [],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-28T04:58:25Z",
+      "downloads": 2,
+      "yanked": null
+    },
+    {
+      "version": "0.1.1",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.1.1/silo-extensions-system-monitor-0.1.1.tgz",
+      "mirrorUrl": null,
+      "sha256": "537f87ba4ed6f978d659b2ebc975ae2435daf52a291f7ce487d9b319ef77a313",
+      "size": 12358,
+      "engine": "^0.15.0",
+      "permissions": [],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-28T01:01:38Z",
+      "downloads": 1,
+      "yanked": null
+    }
+  ],
+  "repoAvailable": true,
+  "lastCheckedAt": "2026-07-13T15:13:22.177Z"
+}

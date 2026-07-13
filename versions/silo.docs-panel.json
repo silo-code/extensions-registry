@@ -1,0 +1,88 @@
+{
+  "id": "silo.docs-panel",
+  "repo": "silo-code/silo-extensions",
+  "versions": [
+    {
+      "version": "0.1.5",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.1.5/silo-extensions-docs-panel-0.1.5.tgz",
+      "mirrorUrl": null,
+      "sha256": "091048b3da4df92fab1659542bd8a7d943677e21dcf1a142c1923935eff0455f",
+      "size": 11319,
+      "engine": "^0.21.0",
+      "permissions": [
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-08T18:22:12Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.4",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.1.4/silo-extensions-docs-panel-0.1.4.tgz",
+      "mirrorUrl": null,
+      "sha256": "d522c7855d695d37c5df6a028a666b52350aeefcdefde5fd2db62d0930c2df90",
+      "size": 10892,
+      "engine": "^0.21.0",
+      "permissions": [
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-06T12:48:41Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
+      "version": "0.1.3",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.1.3/silo-extensions-docs-panel-0.1.3.tgz",
+      "mirrorUrl": null,
+      "sha256": "13b7f9607fb2715d43b8489c045235ae6897f7af1700fb4ad681b0dec065d588",
+      "size": 10854,
+      "engine": "^0.21.0",
+      "permissions": [
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-02T15:58:41Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.2",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.1.2/silo-extensions-docs-panel-0.1.2.tgz",
+      "mirrorUrl": null,
+      "sha256": "ddc555dbbc39032efae1c3edc8a05c1938982fab396e3500ab6bd271d2b55129",
+      "size": 10858,
+      "engine": "^0.15.0",
+      "permissions": [
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-28T04:04:54Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
+      "version": "0.1.1",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.1.1/silo-extensions-docs-panel-0.1.1.tgz",
+      "mirrorUrl": null,
+      "sha256": "ee3635d286fd7a0c8094cde40d1d64ba29f7d241e3de22d9922032703c0db997",
+      "size": 11163,
+      "engine": "^0.8.0",
+      "permissions": [
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-06-19T18:01:35Z",
+      "downloads": 2,
+      "yanked": null
+    }
+  ],
+  "repoAvailable": true,
+  "lastCheckedAt": "2026-07-13T15:12:15.846Z"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "silo.docs-panel",
+  "repo": "silo-code/silo-extensions",
+  "description": "Browse and preview markdown documentation from configurable folder roots.",
+  "categories": ["docs", "side-panel"],
+  "addedAt": "2026-07-13"
+}

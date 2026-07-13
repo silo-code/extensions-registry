@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "registryName": "Silo Extension Registry",
+  "baseUrl": "https://registry.getsilo.dev",
+  "websiteUrl": "https://extensions.getsilo.dev",
+  "knownPermissions": ["fs:read", "fs:write", "process", "network", "webview"],
+  "reservedNamespaces": {
+    "silo": "silo-code",
+    "silo-code": "silo-code",
+    "core": "silo-code"
+  },
+  "categories": [
+    "agent-tools",
+    "docs",
+    "editor",
+    "integration",
+    "monitoring",
+    "productivity",
+    "side-panel",
+    "status-bar",
+    "themes",
+    "webview"
+  ],
+  "maxTarballBytes": 10485760,
+  "maxDescriptionLength": 300,
+  "maxCategories": 5
+}

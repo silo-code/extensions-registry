@@ -1,0 +1,36 @@
+name: validate-registration
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate changed registrations (add-only, extensions/ only)
+        run: node scripts/validate-registration.js --base "origin/${{ github.base_ref }}"
+
+  automerge:
+    # Registration PRs that pass validation merge with no human in the loop.
+    # Requires: repo setting "Allow auto-merge" + branch protection making the
+    # `validate` check required on main.
+    needs: validate
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Enable auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
