@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { config, index } from "../lib/data.js";
+
+const extensions = index.extensions.filter((e) => e.status !== "removed");
+const categories = [...new Set(extensions.flatMap((e) => e.categories))].sort();
+---
+
+<Layout title="Silo Extensions" description="Discover and install extensions for the Silo code editor">
+  <section class="hero">
+    <h1>Extensions for Silo</h1>
+    <p>
+      Install from the app (<code>Settings → Extensions</code>), or from a shell:
+      <code>silo install &lt;id&gt;</code>
+    </p>
+    <input id="search" type="search" placeholder={`Search ${extensions.length} extensions…`} autocomplete="off" />
+    <div class="cats">
+      <button class="pill cat active" data-cat="">all</button>
+      {categories.map((c) => <button class="pill cat" data-cat={c}>{c}</button>)}
+    </div>
+  </section>
+
+  <section id="grid">
+    {
+      extensions.map((e) => (
+        <a
+          class="card"
+          href={`/${e.id}`}
+          data-search={`${e.id} ${e.description} ${e.categories.join(" ")}`.toLowerCase()}
+          data-cats={e.categories.join(",")}
+        >
+          <div class="card-head">
+            <strong>{e.id}</strong>
+            {e.latest ? <span class="version">v{e.latest.version}</span> : <span class="version">unreleased</span>}
+          </div>
+          <p>{e.description}</p>
+          <div class="card-foot">
+            {e.latest?.provenance === "attested" && <span class="pill attested">verified build</span>}
+            {e.status === "unavailable" && <span class="pill unavailable">unavailable</span>}
+            {(e.latest?.permissions ?? []).map((p) => <span class="pill perm">{p}</span>)}
+            <span class="downloads">{e.totalDownloads} ↓</span>
+          </div>
+        </a>
+      ))
+    }
+    <p id="empty" hidden>No extensions match.</p>
+  </section>
+</Layout>
+
+<script>
+  const search = document.getElementById("search") as HTMLInputElement;
+  const cards = [...document.querySelectorAll<HTMLElement>(".card")];
+  const empty = document.getElementById("empty")!;
+  let activeCat = "";
+
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+    let shown = 0;
+    for (const card of cards) {
+      const okText = !q || card.dataset.search!.includes(q);
+      const okCat = !activeCat || card.dataset.cats!.split(",").includes(activeCat);
+      const show = okText && okCat;
+      card.hidden = !show;
+      if (show) shown++;
+    }
+    empty.hidden = shown > 0;
+  }
+
+  search.addEventListener("input", apply);
+  for (const btn of document.querySelectorAll<HTMLElement>(".cat")) {
+    btn.addEventListener("click", () => {
+      activeCat = btn.dataset.cat!;
+      document.querySelectorAll(".cat").forEach((b) => b.classList.toggle("active", b === btn));
+      apply();
+    });
+  }
+</script>
+
+<style>
+  .hero h1 { margin: 0.5rem 0 0.25rem; font-size: 2rem; }
+  .hero p { color: var(--muted); margin-top: 0; }
+  #search {
+    width: 100%; margin: 1rem 0 0.75rem; padding: 0.7rem 1rem;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    color: var(--text); font-size: 1rem;
+  }
+  #search:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .cats { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+  .cat { background: none; cursor: pointer; }
+  .cat.active { color: var(--accent); border-color: var(--accent); }
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .card {
+    display: flex; flex-direction: column; gap: 0.4rem;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 1rem 1.1rem; color: var(--text);
+  }
+  .card:hover { border-color: var(--accent); text-decoration: none; }
+  .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+  .card-head strong { font-family: var(--mono); font-size: 0.95rem; }
+  .version { color: var(--muted); font-size: 0.8rem; font-family: var(--mono); }
+  .card p { margin: 0; color: var(--muted); font-size: 0.88rem; flex: 1; }
+  .card-foot { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+  .downloads { margin-left: auto; color: var(--muted); font-size: 0.8rem; font-family: var(--mono); }
+</style>

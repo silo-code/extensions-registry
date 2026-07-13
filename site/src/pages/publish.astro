@@ -1,0 +1,122 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { config } from "../lib/data.js";
+---
+
+<Layout title="Publish your extension — Silo Extensions" description="Register and publish a Silo extension">
+  <h1>Publish your extension</h1>
+  <p class="lead">
+    Publishing is release-driven: after a one-time registration, every GitHub
+    Release you cut appears here automatically. No accounts, no tokens — your
+    registry identity is your GitHub identity.
+  </p>
+
+  <h2>1. Set up releases (once per repo)</h2>
+  <p>
+    New extension? <code>npx create-silo-extension</code> scaffolds everything,
+    including the publish workflow. Existing extension: add
+    <a href="https://github.com/silo-code/publish-extension-action">publish-extension-action</a>
+    — then publishing is just <code>npm version patch && git push --follow-tags</code>.
+  </p>
+
+  <h2>2. Register (once per extension)</h2>
+  <p>
+    Fill this in; it opens GitHub with the registration file pre-filled. A bot
+    validates it and merges automatically — no waiting for a human. The id is
+    derived as <code>&lt;github-owner&gt;.&lt;name&gt;</code>: that binding is
+    checked, so nobody can publish under your name.
+  </p>
+
+  <form id="reg">
+    <label>
+      GitHub repository
+      <input name="repo" placeholder="you/silo-weather" required pattern="[A-Za-z0-9-]+/[A-Za-z0-9._-]+" />
+    </label>
+    <label>
+      Extension name <span class="hint">(the part after the dot in the id; letters, digits, - _ .)</span>
+      <input name="name" placeholder="weather" required pattern="[a-z0-9][a-z0-9._-]*" />
+    </label>
+    <label>
+      Description <span class="hint">(max {config.maxDescriptionLength} chars)</span>
+      <input name="description" placeholder="Weather in your status bar" required maxlength={config.maxDescriptionLength} />
+    </label>
+    <fieldset>
+      <legend>Categories <span class="hint">(1–{config.maxCategories})</span></legend>
+      {
+        config.categories.map((c) => (
+          <label class="cat">
+            <input type="checkbox" name="cat" value={c} /> {c}
+          </label>
+        ))
+      }
+    </fieldset>
+    <p class="preview"><code id="id-preview">your id: —</code></p>
+    <button type="submit">Open pre-filled registration on GitHub →</button>
+  </form>
+
+  <h2>3. Done</h2>
+  <p>
+    After the bot merges, the registry ingests your latest release and your
+    extension goes live at <code>extensions.getsilo.dev/&lt;id&gt;</code>.
+    Publish from CI (the action above) and your listing gets the
+    <span class="pill attested">verified build</span> badge — cryptographic
+    proof the tarball was built from your repo.
+  </p>
+</Layout>
+
+<script>
+  const form = document.getElementById("reg") as HTMLFormElement;
+  const preview = document.getElementById("id-preview")!;
+
+  function currentId() {
+    const repo = (form.elements.namedItem("repo") as HTMLInputElement).value.trim();
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
+    const owner = repo.split("/")[0]?.toLowerCase();
+    return owner && name ? `${owner}.${name}` : null;
+  }
+
+  form.addEventListener("input", () => {
+    preview.textContent = `your id: ${currentId() ?? "—"}`;
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const id = currentId();
+    if (!id) return;
+    const repo = (form.elements.namedItem("repo") as HTMLInputElement).value.trim();
+    const description = (form.elements.namedItem("description") as HTMLInputElement).value.trim();
+    const categories = [...form.querySelectorAll<HTMLInputElement>('input[name="cat"]:checked')].map((c) => c.value);
+    if (categories.length === 0) {
+      alert("Pick at least one category.");
+      return;
+    }
+    const registration = { id, repo, description, categories, addedAt: new Date().toISOString().slice(0, 10) };
+    const url =
+      "https://github.com/silo-code/extensions-registry/new/main" +
+      `?filename=${encodeURIComponent(`extensions/${id}.json`)}` +
+      `&value=${encodeURIComponent(JSON.stringify(registration, null, 2) + "\n")}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+<style>
+  .lead { color: var(--muted); }
+  h2 { margin-top: 2rem; }
+  form { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; display: grid; gap: 1rem; }
+  label { display: grid; gap: 0.3rem; font-size: 0.92rem; }
+  .hint { color: var(--muted); font-size: 0.8rem; }
+  input:not([type="checkbox"]) {
+    padding: 0.55rem 0.75rem; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 6px; color: var(--text); font-size: 0.95rem;
+  }
+  input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  fieldset { border: 1px solid var(--border); border-radius: 8px; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+  legend { color: var(--muted); font-size: 0.85rem; padding: 0 0.4rem; }
+  .cat { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--mono); font-size: 0.85rem; }
+  .preview code { color: var(--accent); }
+  button {
+    justify-self: start; background: var(--accent); color: #0d1117; border: none;
+    border-radius: 8px; padding: 0.6rem 1.1rem; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+  }
+  button:hover { filter: brightness(1.1); }
+</style>

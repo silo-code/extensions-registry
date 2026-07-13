@@ -1,0 +1,89 @@
+---
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description ?? "Extensions for the Silo code editor"} />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="brand" href="/">Silo <span>Extensions</span></a>
+        <div class="links">
+          <a href="/publish">Publish</a>
+          <a href="https://getsilo.dev">Docs</a>
+          <a href="https://github.com/silo-code/extensions-registry">GitHub</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>
+        Extensions run unsandboxed — <strong>install extensions you trust</strong>.
+        Every install shows a permission prompt.
+        <a href="https://github.com/silo-code/silo/blob/main/docs/proposals/0014-extension-registry.md">How the registry works</a> ·
+        <a href="https://github.com/silo-code/extensions-registry/issues/new">Report an extension</a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #e8843c;
+    --good: #3fb950;
+    --warn: #d29922;
+    --bad: #f85149;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { border-bottom: 1px solid var(--border); }
+  nav {
+    max-width: 960px; margin: 0 auto; padding: 0.9rem 1.25rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { color: var(--text); font-weight: 700; font-size: 1.05rem; }
+  .brand span { color: var(--accent); }
+  .links { display: flex; gap: 1.25rem; }
+  .links a { color: var(--muted); }
+  .links a:hover { color: var(--text); text-decoration: none; }
+  main { max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  footer { border-top: 1px solid var(--border); }
+  footer p { max-width: 960px; margin: 0 auto; padding: 1.25rem; color: var(--muted); font-size: 0.85rem; }
+  code, pre { font-family: var(--mono); }
+  pre {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; font-size: 0.88rem;
+  }
+  code { background: var(--panel); border-radius: 4px; padding: 0.1em 0.35em; font-size: 0.9em; }
+  pre code { background: none; padding: 0; }
+  .pill {
+    display: inline-block; border: 1px solid var(--border); border-radius: 999px;
+    padding: 0.05rem 0.6rem; font-size: 0.75rem; color: var(--muted);
+    font-family: var(--mono);
+  }
+  .pill.perm { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, transparent); }
+  .pill.attested { color: var(--good); border-color: color-mix(in srgb, var(--good) 40%, transparent); }
+  .pill.unavailable { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, transparent); }
+</style>

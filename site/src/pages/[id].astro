@@ -1,0 +1,119 @@
+---
+import { marked } from "marked";
+import Layout from "../layouts/Layout.astro";
+import { advisoriesFor, extensionDetail, extensionReadme, index } from "../lib/data.js";
+
+export function getStaticPaths() {
+  return index.extensions.map((e) => ({ params: { id: e.id } }));
+}
+
+const { id } = Astro.params;
+const entry = index.extensions.find((e) => e.id === id);
+const detail = extensionDetail(id);
+const readmeHtml = marked.parse(extensionReadme(id));
+const advisories = advisoriesFor(id);
+const latest = entry.latest;
+const versions = detail.versions ?? [];
+---
+
+<Layout title={`${id} — Silo Extensions`} description={entry.description}>
+  <article>
+    <header class="ext-head">
+      <div>
+        <h1>{id}</h1>
+        <p class="desc">{entry.description}</p>
+        <div class="badges">
+          {latest?.provenance === "attested" && <span class="pill attested">verified build</span>}
+          {entry.status === "unavailable" && <span class="pill unavailable">source unavailable</span>}
+          {entry.categories.map((c) => <span class="pill">{c}</span>)}
+        </div>
+      </div>
+      <aside>
+        <pre><code>silo install {id}</code></pre>
+        <dl>
+          <dt>Latest</dt>
+          <dd>{latest ? `v${latest.version}` : "unreleased"}</dd>
+          <dt>Publisher</dt>
+          <dd><a href={`https://github.com/${entry.repo.split("/")[0]}`}>{entry.repo.split("/")[0]}</a></dd>
+          <dt>Source</dt>
+          <dd><a href={`https://github.com/${entry.repo}`}>{entry.repo}</a></dd>
+          <dt>Downloads</dt>
+          <dd>{entry.totalDownloads}</dd>
+          <dt>Permissions</dt>
+          <dd>
+            {
+              (latest?.permissions ?? []).length > 0
+                ? latest.permissions.map((p) => <span class="pill perm">{p}</span>)
+                : "none"
+            }
+          </dd>
+        </dl>
+      </aside>
+    </header>
+
+    {
+      advisories.length > 0 && (
+        <div class="advisory">
+          <strong>⚠ Security advisory</strong>
+          {advisories.map((a) => (
+            <p>
+              {a.severity}: {a.reason} (versions {a.versions}, action: {a.action})
+            </p>
+          ))}
+        </div>
+      )
+    }
+
+    <section class="readme" set:html={readmeHtml} />
+
+    <section>
+      <h2>Versions</h2>
+      <table>
+        <thead>
+          <tr><th>Version</th><th>Published</th><th>Permissions</th><th>Build</th><th>sha256</th></tr>
+        </thead>
+        <tbody>
+          {
+            versions.map((v) => (
+              <tr class={v.yanked ? "yanked" : ""}>
+                <td>
+                  <a href={v.tarballUrl}>v{v.version}</a>
+                  {v.yanked && <span class="pill unavailable">yanked</span>}
+                  {v.permissionsWidened && <span class="pill perm">permissions widened</span>}
+                </td>
+                <td>{v.publishedAt?.slice(0, 10)}</td>
+                <td>{v.permissions.join(", ") || "none"}</td>
+                <td>{v.provenance === "attested" ? "verified" : "—"}</td>
+                <td class="sha" title={v.sha256}>{v.sha256.slice(0, 12)}…</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .ext-head { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start; }
+  @media (max-width: 720px) { .ext-head { grid-template-columns: 1fr; } }
+  h1 { font-family: var(--mono); font-size: 1.6rem; margin: 0.25rem 0; }
+  .desc { color: var(--muted); }
+  .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  aside { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
+  aside pre { margin: 0 0 0.75rem; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin: 0; font-size: 0.88rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+  .advisory {
+    margin-top: 1.5rem; border: 1px solid var(--bad); border-radius: 10px;
+    padding: 0.75rem 1rem; background: color-mix(in srgb, var(--bad) 8%, transparent);
+  }
+  .advisory p { margin: 0.25rem 0 0; }
+  .readme { border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th, td { text-align: left; padding: 0.45rem 0.75rem 0.45rem 0; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; }
+  .sha { font-family: var(--mono); color: var(--muted); }
+  .yanked td { opacity: 0.55; }
+</style>
