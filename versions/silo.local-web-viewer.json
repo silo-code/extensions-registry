@@ -15,7 +15,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-12T13:46:01Z",
-      "downloads": 2,
+      "downloads": 8,
       "yanked": null,
       "tag": "local-web-viewer@v0.1.4",
       "name": "Local Web Viewer"
@@ -67,5 +67,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-13T16:18:16.299Z"
+  "lastCheckedAt": "2026-07-13T20:24:22.084Z"
 }

@@ -3,6 +3,25 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.3",
+      "tag": "system-monitor@v0.2.3",
+      "name": "System Monitor",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.2.3/silo-extensions-system-monitor-0.2.3.tgz",
+      "mirrorUrl": null,
+      "sha256": "af294952a2cc891ef6eaf5906bdfbf34c9d8004367163c1dfd9bf0ab4bce5a29",
+      "size": 13426,
+      "engine": "^0.17.0",
+      "permissions": [
+        "process",
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-13T20:00:40Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.2.2",
       "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.2.2/silo-extensions-system-monitor-0.2.2.tgz",
       "mirrorUrl": null,
@@ -16,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-02T13:48:15Z",
-      "downloads": 5,
+      "downloads": 10,
       "yanked": null,
       "tag": "system-monitor@v0.2.2",
       "name": "System Monitor"
@@ -71,5 +90,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-13T16:18:16.748Z"
+  "lastCheckedAt": "2026-07-13T20:24:22.643Z"
 }
