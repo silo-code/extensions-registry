@@ -8,11 +8,29 @@ The Local Web Viewer is designed for **localhost browsing**. Use it to keep your
 
 It is **not** a general-purpose browser. Most production websites block iframe embedding via `X-Frame-Options` or CSP `frame-ancestors`, and those will show a "doesn't allow embedding" overlay instead of loading. The panel will offer to open blocked URLs in your default browser instead.
 
+## Back/forward navigation
+
+The panel tracks in-frame navigation — including SPA client-side routing (React Router, Vue Router, etc.) — via the `ctx.webview` bridge's navigation events, and maintains its own history stack (persisted across workspace switches and app restarts) rather than relying on the iframe's own session history.
+
+## Screenshot & annotate
+
+Click the camera icon in the toolbar to capture the page:
+
+- **Visible area** — captures what's currently in the frame.
+- **Full page** — captures the entire scrollable page, not just the visible viewport.
+- **Select region** — drag a marquee over the part of the page you want.
+- **Capture element** — pick a specific DOM element (same picker used for "Pick element").
+
+Every capture opens an annotation modal where you can draw over the screenshot (freehand, a few pen colors, undo/clear) before copying the result to the clipboard.
+
 ## Known limitations
 
-- **No back/forward navigation.** SPA client-side routing (React Router, Vue Router, etc.) does not trigger iframe load events, so the panel cannot track in-frame navigation. A future proposal ([RFC 0011](https://github.com/silo-code/silo/blob/main/docs/proposals/0011-iframe-navigation-events.md)) outlines how Tauri's webview init script could solve this generically.
 - **Remote sites that block iframes** show a blocked overlay. This is expected — the panel probes `X-Frame-Options` and CSP headers via a server-side HEAD request before attempting to embed.
-- **SPA back/forward** requires either a future `ctx.webview` SDK surface or the loaded app emitting `window.parent.postMessage` events on route changes.
+- **Screenshot capture is still being verified on Windows and Linux.** It's known-working on macOS. On Windows, capturing currently fails with `Screenshot failed — see Output for details.` in the extension's Output panel — this points at the host's `ctx.webview` capture implementation, not this extension's code, and is being investigated. If you hit this, please attach the Output panel error to a bug report.
+
+## Uses `ctx.webview`
+
+This extension is built on the `ctx.webview` bridge. `ctx.webview.attach(iframe)` returns a `WebFrame` that the panel uses for `onNavigate` (drives back/forward history tracking), `onBlocked` (detects embeds the host itself refused to load), `exec` (reads `document.title`), and the screenshot tools — `capture`, `captureRect`, `captureFullPage`, and `pickElement`. Back/forward tracking and screenshots only work because of this bridge; when a capture fails (see Known limitations), the error originates here, not in this extension's own code.
 
 ## Uses `ctx.net`
 
