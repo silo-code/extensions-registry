@@ -2,12 +2,13 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps CPU, memory, and per-terminal process activity visible at a glance — without leaving your editor. Works on **macOS, Linux, and Windows**.
 
-![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.2.8/system-monitor/assets/screenshot.png)
+![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.3.0/system-monitor/assets/screenshot.png)
 
 ## What you get
 
 - **Side panel** — a dedicated SYSTEM tab with a memory donut chart, a scrolling CPU history graph (User vs System split), and a live Processes list for the current workspace
-- **Status bar readouts** — compact live counters at the bottom of the window that stay visible even when the panel is closed
+- **Status bar readouts** — compact live counters at the bottom of the window that stay visible even when the panel is closed; click any chip to open the all-workspaces modal
+- **All-workspaces process monitor** — a Chrome/Windows Task Manager-style modal with live CPU and memory graphs, a filter box, sortable columns, and every terminal session across all workspaces grouped by workspace (see below)
 - **Configurable** — choose which metrics appear, on which surfaces, and in what order via Settings or the in-panel gear icon
 - **Persistent settings** — your choices are saved across restarts and apply to all workspaces automatically
 
@@ -25,6 +26,20 @@ the section is enabled — closing the panel or disabling it in Settings stops
 the extra polling. Process trees (the expand/kill affordances) require `ps`
 and aren't available on Windows; the panel still shows each terminal's
 foreground program there.
+
+## All-workspaces process monitor
+
+When CPU is climbing and you're not sure which workspace (or whether any
+workspace) is the cause, click **All processes…** at the bottom of the side
+panel, or click any status bar chip, to open the process monitor.
+
+![All-workspaces process monitor showing CPU/memory graphs and process table](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.3.0/system-monitor/assets/screenshot-processes.png)
+
+- **Live mini graphs** — CPU (User + System split, same bar style as the panel) and memory history so you can see the trend at a glance
+- **Filter** — type to narrow by task name or workspace name
+- **Sortable columns** — click Name, CPU, or Memory to re-sort; groups reorder by their aggregate, sessions reorder within each group
+- **Collapsible workspace groups** — sorted hottest-first; each group shows its aggregate CPU/memory with heat tinting that deepens toward your configured danger threshold
+- **Selection + actions** — click to select a row, then use **Go to Terminal** (activates the workspace and focuses the terminal) or **End Task** (kill with confirmation); double-clicking a row also jumps straight to the terminal
 
 ## Cross-platform
 
