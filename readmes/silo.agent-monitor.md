@@ -2,7 +2,7 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps track of every coding agent running in your terminals — so you always know which ones are working, which finished, and which are waiting on you — without tabbing through every terminal to check.
 
-![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.1.2/agent-monitor/assets/screenshot.png)
+![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.1.3/agent-monitor/assets/screenshot.png)
 
 ## What you get
 
@@ -19,6 +19,7 @@ Detection is driven entirely by terminal escape sequences (OSC), so there's noth
 | Agent | Signal |
 | --- | --- |
 | **Claude Code** | OSC 0 title: braille spinner (busy) / `✳` (waiting) |
+| **Cursor Agent** | OSC 0 title when `display.showStatusIndicators` is enabled in `~/.cursor/cli-config.json` (`⏳ Working …` / `✅ Ready`, etc.); otherwise falls back to detecting the TUI's braille spinner frames in the raw PTY stream |
 | **Codex CLI** | OSC 0 title clears / `[ ! ]` / `[ . ]`, plus OSC 9 desktop notifications |
 | **GitHub Copilot CLI** | OSC 9;4 progress protocol |
 | **Anything with shell integration** (e.g. `pi`) | OSC 133 FTCS sequences — command-running vs. prompt-returned, with an idle-debounce fallback for agents that never emit a completion signal |
