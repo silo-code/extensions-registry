@@ -3,6 +3,60 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.1.13",
+      "tag": "github-actions@v0.1.13",
+      "name": "GitHub Actions",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.13/silo-extensions-github-actions-0.1.13.tgz",
+      "mirrorUrl": null,
+      "sha256": "257b940b25dc2e1f23f1490577715e7e760966a0ca593614ed4a9352c1ef3828",
+      "size": 23483,
+      "engine": "^0.31.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-17T02:37:20Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.12",
+      "tag": "github-actions@v0.1.12",
+      "name": "GitHub Actions",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.12/silo-extensions-github-actions-0.1.12.tgz",
+      "mirrorUrl": null,
+      "sha256": "7a8724af42ac3b83d73c574f3da15349ce95810710194b9b6b6fffa751061054",
+      "size": 23171,
+      "engine": "^0.31.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-17T01:59:08Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
+      "version": "0.1.11",
+      "tag": "github-actions@v0.1.11",
+      "name": "GitHub Actions",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.11/silo-extensions-github-actions-0.1.11.tgz",
+      "mirrorUrl": null,
+      "sha256": "7415ac88f0cc1b87b5ad6d5e52d5ce6c6f616a373ce915777cf2f9978072537f",
+      "size": 22855,
+      "engine": "^0.31.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-17T01:33:52Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
       "version": "0.1.10",
       "tag": "github-actions@v0.1.10",
       "name": "GitHub Actions",
@@ -17,7 +71,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-16T12:40:34Z",
-      "downloads": 8,
+      "downloads": 9,
       "yanked": null
     },
     {
@@ -176,5 +230,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-17T00:08:10.264Z"
+  "lastCheckedAt": "2026-07-17T03:47:41.810Z"
 }
