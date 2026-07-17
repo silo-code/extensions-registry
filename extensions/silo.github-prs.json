@@ -1,0 +1,12 @@
+{
+  "id": "silo.github-prs",
+  "repo": "silo-code/silo-extensions",
+  "description": "GitHub pull requests for workspace repos in a side panel \u2014 review state, CI checks, and drill-in details at a glance.",
+  "categories": [
+    "integration",
+    "side-panel",
+    "monitoring"
+  ],
+  "addedAt": "2026-07-17",
+  "path": "github-prs"
+}
