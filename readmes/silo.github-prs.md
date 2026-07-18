@@ -2,7 +2,7 @@
 
 Browse open and recently merged pull requests for the GitHub repos in your workspace — review state, CI checks, and drill-in details — without leaving Silo.
 
-![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.1/github-prs/assets/hero.png)
+![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.2/github-prs/assets/hero.png)
 
 ## What you get
 
