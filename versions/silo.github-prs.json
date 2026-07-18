@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.1.3",
+      "tag": "github-prs@v0.1.3",
+      "name": "GitHub Pull Requests",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-prs%40v0.1.3/silo-extensions-github-prs-0.1.3.tgz",
+      "mirrorUrl": null,
+      "sha256": "41ce0a3f3cf79087b88b182e2ec5a475fda89dba2ca02d30153784bbac4c9e05",
+      "size": 106792,
+      "engine": "^0.31.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-18T15:04:38Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.1.2",
       "tag": "github-prs@v0.1.2",
       "name": "GitHub Pull Requests",
@@ -17,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-18T13:37:52Z",
-      "downloads": 0,
+      "downloads": 1,
       "yanked": null
     },
     {
@@ -40,5 +58,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-18T13:59:44.491Z"
+  "lastCheckedAt": "2026-07-18T15:06:26.757Z"
 }

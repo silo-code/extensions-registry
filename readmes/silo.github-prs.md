@@ -2,13 +2,14 @@
 
 Browse open and recently merged pull requests for the GitHub repos in your workspace — review state, CI checks, and drill-in details — without leaving Silo.
 
-![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.2/github-prs/assets/hero.png)
+![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.3/github-prs/assets/hero.png)
 
 ## What you get
 
 - Side panel listing PRs for every GitHub remote in the active workspace
 - Filters: My PRs (default), Needs my review, All open, Recently merged
 - Click a row for CI checks, reviews, description, and activity
+- Merge from the detail view when the PR is merge-ready (disabled with a reason otherwise)
 - At-a-glance review icons, check rollup, draft and conflict chips
 - Copy PR URL, head branch, or `gh pr checkout N`
 - Configurable polling for active and background workspaces
@@ -40,7 +41,7 @@ Then in Silo: **Settings → Extensions → Install from folder**, point at this
 
 Open the **PRS** panel on the right. The default filter is **My PRs**. Switch filters from the header menu; **Recently merged** fetches on demand.
 
-Click a row for details. List data shows immediately; description and activity load next. Use the overflow menu to copy the URL, branch name, or checkout command.
+Click a row for details. List data shows immediately; description and activity load next. Use **Merge** on the detail header when the PR is ready (confirm first). Use the overflow menu to copy the URL, branch name, or checkout command.
 
 If monitoring was turned off for a workspace, use **Enable** in the panel gate to turn it back on.
 
