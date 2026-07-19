@@ -2,7 +2,7 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that surfaces GitHub Actions workflow status directly in your editor — across every open workspace, without leaving your code.
 
-![GitHub Actions extension showing workflow status badges in the workspace panel](https://raw.githubusercontent.com/silo-code/silo-extensions/github-actions@v0.1.14/github-actions/assets/hero.png)
+![GitHub Actions extension showing workflow status badges in the workspace panel](https://raw.githubusercontent.com/silo-code/silo-extensions/github-actions@v0.1.15/github-actions/assets/hero.png)
 
 ## What you get
 
@@ -17,11 +17,11 @@ A [Silo](https://github.com/silo-code/silo) extension that surfaces GitHub Actio
 
 **Status bar**
 
-![Status bar showing "Actions: 1 running"](https://raw.githubusercontent.com/silo-code/silo-extensions/github-actions@v0.1.14/github-actions/assets/status-bar.png)
+![Status bar showing "Actions: 1 running"](https://raw.githubusercontent.com/silo-code/silo-extensions/github-actions@v0.1.15/github-actions/assets/status-bar.png)
 
 **Workflow modal**
 
-![Modal showing a failed publish workflow with Re-run button](https://raw.githubusercontent.com/silo-code/silo-extensions/github-actions@v0.1.14/github-actions/assets/modal.png)
+![Modal showing a failed publish workflow with Re-run button](https://raw.githubusercontent.com/silo-code/silo-extensions/github-actions@v0.1.15/github-actions/assets/modal.png)
 
 ## Requirements
 
