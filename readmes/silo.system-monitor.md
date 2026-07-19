@@ -2,7 +2,7 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps CPU, memory, and per-terminal process activity visible at a glance — without leaving your editor. Works on **macOS, Linux, and Windows**.
 
-![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.3.2/system-monitor/assets/screenshot.png)
+![System Monitor panel showing memory donut chart and CPU history graph](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.3.3/system-monitor/assets/screenshot.png)
 
 ## What you get
 
@@ -33,7 +33,7 @@ When CPU is climbing and you're not sure which workspace (or whether any
 workspace) is the cause, click **All processes…** at the bottom of the side
 panel, or click any status bar chip, to open the process monitor.
 
-![All-workspaces process monitor showing CPU/memory graphs and process table](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.3.2/system-monitor/assets/screenshot-processes.png)
+![All-workspaces process monitor showing CPU/memory graphs and process table](https://raw.githubusercontent.com/silo-code/silo-extensions/system-monitor@v0.3.3/system-monitor/assets/screenshot-processes.png)
 
 - **Live mini graphs** — CPU (User + System split, same bar style as the panel) and memory history so you can see the trend at a glance
 - **Filter** — type to narrow by task name or workspace name
