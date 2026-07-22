@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.1.6",
+      "tag": "local-web-viewer@v0.1.6",
+      "name": "Local Web Viewer",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/local-web-viewer%40v0.1.6/silo-extensions-local-web-viewer-0.1.6.tgz",
+      "mirrorUrl": null,
+      "sha256": "468d51cdb1b4da232be2aaec24fd95ac3fefc367df1deb452e6e315f9571f9b9",
+      "size": 19758,
+      "engine": "^0.35.0",
+      "permissions": [
+        "webview"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-22T15:45:23Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.1.5",
       "tag": "local-web-viewer@v0.1.5",
       "name": "Local Web Viewer",
@@ -17,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-14T16:24:43Z",
-      "downloads": 104,
+      "downloads": 105,
       "yanked": null
     },
     {
@@ -85,5 +103,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-22T15:20:31.422Z"
+  "lastCheckedAt": "2026-07-22T16:56:30.273Z"
 }
