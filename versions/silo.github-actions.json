@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.1.18",
+      "tag": "github-actions@v0.1.18",
+      "name": "GitHub Actions",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-actions%40v0.1.18/silo-extensions-github-actions-0.1.18.tgz",
+      "mirrorUrl": null,
+      "sha256": "0f0bc8d804ec6026626d029a70469790ab19a105b42698c9c0bfcee6ab8d2b1a",
+      "size": 24814,
+      "engine": "^0.34.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-07-25T13:18:30Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.1.17",
       "tag": "github-actions@v0.1.17",
       "name": "GitHub Actions",
@@ -17,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-21T16:02:13Z",
-      "downloads": 46,
+      "downloads": 47,
       "yanked": null
     },
     {
@@ -302,5 +320,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-25T11:45:15.050Z"
+  "lastCheckedAt": "2026-07-25T13:41:03.361Z"
 }
