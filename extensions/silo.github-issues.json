@@ -1,0 +1,12 @@
+{
+  "id": "silo.github-issues",
+  "repo": "silo-code/silo-extensions",
+  "description": "GitHub issues for workspace repos in a side panel — status, labels, assignees, and drill-in details, with quick copy for handing work to an agent.",
+  "categories": [
+    "integration",
+    "side-panel",
+    "agent-tools"
+  ],
+  "addedAt": "2026-07-26",
+  "path": "github-issues"
+}
