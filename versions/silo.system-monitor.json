@@ -18,7 +18,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-19T14:16:09Z",
-      "downloads": 109,
+      "downloads": 110,
       "yanked": null
     },
     {
@@ -255,11 +255,11 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-28T01:01:38Z",
-      "downloads": 2,
+      "downloads": 3,
       "yanked": null,
       "tag": "system-monitor@v0.1.1"
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-07-29T00:58:34.247Z"
+  "lastCheckedAt": "2026-07-29T04:20:36.904Z"
 }
