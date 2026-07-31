@@ -1,0 +1,11 @@
+{
+  "id": "silo.follow-ups",
+  "repo": "silo-code/silo-extensions",
+  "description": "Mark editor and terminal tabs to come back to later — toolbar Flag toggle, tab chip, and a Workspaces panel rollup.",
+  "categories": [
+    "productivity",
+    "editor"
+  ],
+  "addedAt": "2026-07-31",
+  "path": "follow-ups"
+}
