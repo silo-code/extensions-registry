@@ -2,13 +2,14 @@
 
 Browse open and recently merged pull requests for the GitHub repos in your workspace — review state, CI checks, and drill-in details — without leaving Silo.
 
-![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.9/github-prs/assets/hero.png)
+![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.11/github-prs/assets/hero.png)
 
 ## What you get
 
 - Side panel listing PRs for every unique GitHub remote in the active workspace (worktrees of the same repo collapse into one list)
 - Filters: My PRs (default), Needs my review, All open, Recently merged
 - Click a row for CI checks, reviews, description, and activity
+- Drill from a PR into its commits, then a commit's changed files, then open a file's diff — sourced from GitHub directly, so it works even for commits never fetched into your local clone (e.g. a fork PR's head)
 - Merge from the detail view when the PR is merge-ready (disabled with a reason otherwise)
 - At-a-glance review icons, check rollup, draft and conflict chips
 - Copy PR URL, head branch, or `gh pr checkout N`
@@ -43,6 +44,8 @@ Open the **PRS** panel on the right. The default filter is **My PRs**. Switch fi
 
 Click a row for details. List data shows immediately; description and activity load next. Use **Merge** on the detail header when the PR is ready (confirm first). Use the overflow menu to copy the URL, branch name, or checkout command.
 
+From the detail view, open **Commits** to see the PR's own commit history, click a commit for its changed files, then click a file to open its diff.
+
 If monitoring was turned off for a workspace, use **Enable** in the panel gate to turn it back on.
 
 ## Settings
@@ -56,9 +59,7 @@ Open **Settings → GitHub Pull Requests**:
 
 ## Permissions
 
-Declared in `package.json` under `silo.permissions`:
-
-- **`process`** — run `gh` / `git` to resolve remotes, list PRs, and check authentication
+None declared — every `gh` invocation runs scoped to an open workspace folder, which doesn't require the `process` permission.
 
 ## Building
 
