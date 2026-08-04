@@ -2,17 +2,19 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps track of every coding agent running in your terminals — so you always know which ones are working, which finished, and which are waiting on you — without tabbing through every terminal to check.
 
-![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.1/agent-monitor/assets/screenshot.png)
+![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.2/agent-monitor/assets/screenshot.png)
 
 ## What you get
 
+- **Agents panel** — a dedicated side panel listing every agent terminal across every workspace, sectioned into Ready / Working / Done (or grouped by workspace instead, via the panel's own view toggle); click a row to jump straight to that terminal, whichever workspace it's in
+- **Agent icons** — each row (and the terminal tab itself) can show the agent's own brand icon — Claude Code, Cursor, Codex, GitHub Copilot, Grok — in color or a single neutral tone
 - **Status rows in the Workspaces panel** — each terminal running an agent gets a row while it's busy (with elapsed time), once it finishes and needs your attention, or if it errors out
 - **Terminal tab badges** — a spinner, check, warning, or error glyph decorates the tab itself, so status is visible even with the panel closed
 - **Sticky "needs attention"** — a finished agent stays flagged until you actually view that terminal, so nothing gets missed in a stack of background sessions
-- **Survives restarts** — state and elapsed time are restored across app restarts, and a restored row is marked "(unconfirmed)" if the gap since last seen is long enough that the agent may have finished without being observed
+- **Survives restarts** — state and elapsed time (including how long a finished agent has been idle, shown in the Agents panel) are restored across app restarts, and a restored row is marked "(unconfirmed)" if the gap since last seen is long enough that the agent may have finished without being observed
 - **Dead-session recovery** — if a terminal's agent backend is confirmed gone after an unclean shutdown, its tab shows a warning and (when Silo could resolve one) a copy-pasteable `--resume` hint right in the tooltip
 - **Sound** — an optional chime whenever an agent stops working, whether or not you're watching its terminal
-- **Configurable** — a Settings page to choose what viewing a finished terminal does (acknowledge, acknowledge + hide its row, or leave it), plus the notification sound
+- **Configurable** — a Settings page to choose what viewing a finished terminal does (acknowledge, acknowledge + hide its row, or leave it), the Agents panel's icon style, and the notification sound
 
 ## Supported agents
 
