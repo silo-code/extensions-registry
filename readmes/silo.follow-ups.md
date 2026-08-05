@@ -10,7 +10,7 @@ this” flag with a Workspaces panel rollup.
   (when breadcrumbs are on); pressed when the active tab is marked
 - **Tab context menus** — “Mark as follow-up” / “Clear follow-up” on editor and
   terminal tabs (always available, including when breadcrumbs are off)
-- **Tab flag** — a warn-colored Flag indicator on marked tabs
+- **Tab highlight** — a warn-colored whole-tab tint on marked tabs
 - **Workspace rollup** — a status row (`1 follow-up` / `N follow-ups`) when a
   workspace has at least one marked tab
 - **Survives restart** — marks persist while the panel still exists; closing the

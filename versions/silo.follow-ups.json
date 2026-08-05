@@ -3,6 +3,22 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.1",
+      "tag": "follow-ups@v0.2.1",
+      "name": "Follow-ups",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/follow-ups%40v0.2.1/silo-extensions-follow-ups-0.2.1.tgz",
+      "mirrorUrl": null,
+      "sha256": "22c3da1a4f3a63cac15c0a10c372065f900c7cdc3626d158ff2265d6921427c0",
+      "size": 3553,
+      "engine": "^0.42.0",
+      "permissions": [],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-08-04T23:33:46Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.1.1",
       "tag": "follow-ups@v0.1.1",
       "name": "Follow-ups",
@@ -15,10 +31,10 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-31T17:54:33Z",
-      "downloads": 48,
+      "downloads": 49,
       "yanked": null
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-08-04T22:36:24.492Z"
+  "lastCheckedAt": "2026-08-05T00:06:40.109Z"
 }
