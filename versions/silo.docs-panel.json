@@ -15,7 +15,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-08T18:22:12Z",
-      "downloads": 322,
+      "downloads": 323,
       "yanked": null,
       "tag": "docs-panel@v0.1.5",
       "name": "Documents Side Panel"
@@ -90,5 +90,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-08-08T14:34:10.546Z"
+  "lastCheckedAt": "2026-08-08T15:32:46.089Z"
 }
