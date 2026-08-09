@@ -2,8 +2,8 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps track of every coding agent running in your terminals — so you always know which ones are working, which finished, and which are waiting on you — without tabbing through every terminal to check.
 
-![The Agents view in the Navigator, showing Ready and Working sections across workspaces](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.4/agent-monitor/assets/agents-panel.png)
-![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.4/agent-monitor/assets/screenshot.png)
+![The Agents view in the Navigator, showing Ready and Working sections across workspaces](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.5/agent-monitor/assets/agents-panel.png)
+![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.5/agent-monitor/assets/screenshot.png)
 
 ## What you get
 
