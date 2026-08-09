@@ -18,7 +18,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-31T17:36:18Z",
-      "downloads": 105,
+      "downloads": 106,
       "yanked": null
     },
     {
@@ -225,7 +225,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-02T13:48:15Z",
-      "downloads": 10,
+      "downloads": 11,
       "yanked": null,
       "tag": "system-monitor@v0.2.2",
       "name": "System Monitor"
@@ -280,5 +280,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-08-08T23:31:42.397Z"
+  "lastCheckedAt": "2026-08-09T01:56:55.761Z"
 }
