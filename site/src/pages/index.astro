@@ -46,6 +46,46 @@ const categories = [...new Set(extensions.flatMap((e) => e.categories))].sort();
     }
     <p id="empty" hidden>No extensions match.</p>
   </section>
+
+  <section class="home-faq" aria-labelledby="ext-faq-title">
+    <h2 id="ext-faq-title">Extension questions</h2>
+    <div class="home-faq-list">
+      <details class="home-faq-item">
+        <summary><span>How do I install an extension?</span></summary>
+        <p>
+          From the app: <code>Settings → Extensions → Browse</code>. From a shell:
+          <code>silo install &lt;id&gt;</code>. Every install shows a permission prompt first —
+          extensions run unsandboxed, so only install ones you trust.
+        </p>
+      </details>
+      <details class="home-faq-item">
+        <summary><span>How do I publish an extension?</span></summary>
+        <p>
+          Register it once via the <a href="/publish">publish form</a>, then cut a GitHub release with the
+          built package. See <a href="https://getsilo.dev/guide/publishing-an-extension">Publishing an extension</a>
+          for the full walkthrough.
+        </p>
+      </details>
+      <details class="home-faq-item">
+        <summary><span>How does the registry work?</span></summary>
+        <p>
+          It's a git-backed index, not a service — every publish is a commit, so the history is a public audit
+          log. See
+          <a href="https://github.com/silo-code/silo/blob/main/docs/proposals/0014-extension-registry.md">
+            RFC 0014
+          </a>
+          for the design.
+        </p>
+      </details>
+      <details class="home-faq-item">
+        <summary><span>Found a problem with an extension?</span></summary>
+        <p>
+          <a href="https://github.com/silo-code/extensions-registry/issues/new">Open an issue</a> on the registry
+          repo — publishers and maintainers triage from there.
+        </p>
+      </details>
+    </div>
+  </section>
 </Layout>
 
 <script>
@@ -90,7 +130,11 @@ const categories = [...new Set(extensions.flatMap((e) => e.categories))].sort();
   .cats { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
   .cat { background: none; cursor: pointer; }
   .cat.active { color: var(--accent); border-color: var(--accent); }
-  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  /* 72px bottom margin matches the homepage's inter-section gap (see
+     .home-trust's margin in apps/website/src/styles.css — the section
+     right before .home-faq there uses the same value to separate itself
+     from the FAQ that follows it). */
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 72px; }
   .card {
     display: flex; flex-direction: column; gap: 0.4rem;
     background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
