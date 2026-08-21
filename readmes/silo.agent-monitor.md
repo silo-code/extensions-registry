@@ -2,13 +2,13 @@
 
 A [Silo](https://github.com/silo-code/silo) extension that keeps track of every coding agent running in your terminals — so you always know which ones are working, which finished, and which are waiting on you — without tabbing through every terminal to check.
 
-![The Agents view in the Navigator, showing Ready and Working sections across workspaces](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.8/agent-monitor/assets/agents-panel.png)
-![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.8/agent-monitor/assets/screenshot.png)
+![The Agents view in the Navigator, showing Ready and Working sections across workspaces](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.9/agent-monitor/assets/agents-panel.png)
+![Workspaces panel showing agent status rows for running Claude Code sessions](https://raw.githubusercontent.com/silo-code/silo-extensions/agent-monitor@v0.2.9/agent-monitor/assets/screenshot.png)
 
 ## What you get
 
-- **An Agents view in the Navigator** — listing every agent terminal across every workspace, sectioned into Ready / Working / Idle. Click a row to jump straight to that terminal, whichever workspace it's in. **Group by** in the Navigator header flips the sectioning to one heading per workspace instead. It's a Navigator view rather than a second side panel, so there's still one place to navigate from
-- **"N+ hours old" heading** — split long-idle agents out of Idle into their own heading once they've sat that long (on by default, 4 hours, both configurable — or turn it off — in Settings); it starts collapsed and reveals its rows on hover, and opens by default when nothing else is running
+- **An Agents view in the Navigator** — listing every agent terminal across every workspace. **View by** in the Navigator header switches between three ways to read it: **Recent** (the default) — one flat, most-recently-changed-first list, with rows you can drag to reorder (drag from the grip that appears on hover) to pin the ones you care about in place; **Status** — sectioned into Ready / Working / Idle; **Workspace** — one heading per workspace. Click a row to jump straight to that terminal, whichever workspace it's in. It's a Navigator view rather than a second side panel, so there's still one place to navigate from
+- **"N+ hours old" heading** — split long-idle agents out into their own heading once they've sat that long (on by default, 4 hours, both configurable — or turn it off — in Settings); it starts collapsed and reveals its rows on hover, opens by default when nothing else is running, and its rows aren't drag-reorderable in the Recent view
 - **Agent icons** — each row (and the terminal tab itself) can show the agent's own brand icon — Claude Code, Cursor, Codex, GitHub Copilot, Grok — in color or a single neutral tone
 - **Status rows in the Workspaces panel** — each terminal running an agent gets a row while it's busy (with elapsed time), once it finishes and needs your attention, or if it errors out
 - **Terminal tab badges** — a spinner, check, warning, or error glyph decorates the tab itself, so status is visible even with the side panel closed
