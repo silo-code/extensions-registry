@@ -15,6 +15,21 @@ this” flag with a Workspaces panel rollup.
   workspace has at least one marked tab
 - **Survives restart** — marks persist while the panel still exists; closing the
   tab clears that follow-up
+- **Bindable** — assign a shortcut to any of the three commands in
+  **Settings → Keyboard Shortcuts**; pressed from a keybinding they act on the
+  active tab
+
+## Commands
+
+| Command                  | Acts on                                                                                         |
+| ------------------------ | ----------------------------------------------------------------------------------------------- |
+| `silo.follow-ups.toggle` | the tab the toolbar button / tab menu belongs to — or, from a keyboard shortcut, the active tab |
+| `silo.follow-ups.mark`   | same                                                                                            |
+| `silo.follow-ups.clear`  | same                                                                                            |
+
+Assign shortcuts in **Settings → Keyboard Shortcuts** (search "Follow-ups").
+Requires a Silo release that dispatches user-assigned keys for commands with no
+built-in shortcut — on older builds the key is saved but never fires.
 
 ## Permissions
 
