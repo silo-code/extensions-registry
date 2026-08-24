@@ -3,6 +3,22 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.10",
+      "tag": "agent-monitor@v0.2.10",
+      "name": "Agent Monitor",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/agent-monitor%40v0.2.10/silo-extensions-agent-monitor-0.2.10.tgz",
+      "mirrorUrl": null,
+      "sha256": "472bd1cdea69404f6e04642550fbd8ae180a7279c34df42a6d82be24d2050adc",
+      "size": 22837,
+      "engine": "^0.42.0",
+      "permissions": [],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-08-24T20:22:55Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.2.9",
       "tag": "agent-monitor@v0.2.9",
       "name": "Agent Monitor",
@@ -15,7 +31,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-21T20:11:28Z",
-      "downloads": 101,
+      "downloads": 102,
       "yanked": null
     },
     {
@@ -292,5 +308,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-08-24T19:32:03.647Z"
+  "lastCheckedAt": "2026-08-24T20:33:13.191Z"
 }
