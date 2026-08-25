@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.1.4",
+      "tag": "github-issues@v0.1.4",
+      "name": "GitHub Issues",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-issues%40v0.1.4/silo-extensions-github-issues-0.1.4.tgz",
+      "mirrorUrl": null,
+      "sha256": "75d5adafbc248298d53c1a487b3e41c5a1a6e36ddd84c84fb56f47b77e387709",
+      "size": 102045,
+      "engine": "^0.34.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": true,
+      "provenance": "none",
+      "publishedAt": "2026-08-25T21:20:59Z",
+      "downloads": 0,
+      "yanked": null
+    },
+    {
       "version": "0.1.3",
       "tag": "github-issues@v0.1.3",
       "name": "GitHub Issues",
@@ -15,7 +33,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-21T20:10:59Z",
-      "downloads": 125,
+      "downloads": 127,
       "yanked": null
     },
     {
@@ -54,5 +72,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-08-25T20:31:52.982Z"
+  "lastCheckedAt": "2026-08-25T21:30:59.070Z"
 }

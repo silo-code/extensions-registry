@@ -2,7 +2,7 @@
 
 Browse open and recently merged pull requests for the GitHub repos in your workspace — review state, CI checks, and drill-in details — without leaving Silo.
 
-![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.14/github-prs/assets/hero.png)
+![PR detail view showing checks, branch, and review status](https://raw.githubusercontent.com/silo-code/silo-extensions/github-prs@v0.1.15/github-prs/assets/hero.png)
 
 ## What you get
 
@@ -62,7 +62,9 @@ Open **Settings → GitHub Pull Requests**:
 
 ## Permissions
 
-None declared — every `gh` invocation runs scoped to an open workspace folder, which doesn't require the `process` permission.
+Declared in `package.json` under `silo.permissions`:
+
+- **`process`** — run `gh` / `git` to resolve remotes, list pull requests, and check authentication
 
 ## Building
 
