@@ -1,0 +1,12 @@
+{
+  "id": "silo.skills-manager",
+  "repo": "silo-code/silo-extensions",
+  "description": "Agent Skills side panel — inventory of project + user installs, with a dock-anchored sheet to browse and install from skills.sh.",
+  "categories": [
+    "agent-tools",
+    "side-panel",
+    "integration"
+  ],
+  "addedAt": "2026-08-27",
+  "path": "skills-manager"
+}
