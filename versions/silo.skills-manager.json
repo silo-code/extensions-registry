@@ -1,0 +1,27 @@
+{
+  "id": "silo.skills-manager",
+  "repo": "silo-code/silo-extensions",
+  "versions": [
+    {
+      "version": "0.1.1",
+      "tag": "skills-manager@v0.1.1",
+      "name": "Skills Manager",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/skills-manager%40v0.1.1/silo-extensions-skills-manager-0.1.1.tgz",
+      "mirrorUrl": null,
+      "sha256": "b0a472d3121a4f78c85e729ccbb2fbc1a9986e857e9598106801179043663dc5",
+      "size": 24119,
+      "engine": "^0.53.0",
+      "permissions": [
+        "fs:read",
+        "network"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-08-27T13:29:17Z",
+      "downloads": 0,
+      "yanked": null
+    }
+  ],
+  "repoAvailable": true,
+  "lastCheckedAt": "2026-08-27T13:43:09.089Z"
+}
