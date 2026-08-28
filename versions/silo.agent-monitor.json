@@ -15,7 +15,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-27T22:10:00Z",
-      "downloads": 0,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -324,5 +324,5 @@
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-08-28T05:17:44.955Z"
+  "lastCheckedAt": "2026-08-28T17:38:42.161Z"
 }
