@@ -2,7 +2,7 @@
 
 A [Silo](https://github.com/silo-code/silo) extension for [Agent Skills](https://agentskills.io) — see what's installed in the current workspace at a glance, then search, install, and remove more from [skills.sh](https://skills.sh) without ever leaving the editor.
 
-![Browsing trending skills on skills.sh next to the Skills panel's per-workspace inventory](https://raw.githubusercontent.com/silo-code/silo-extensions/skills-manager@v0.1.1/skills-manager/assets/browse-and-inventory.png)
+![Browsing trending skills on skills.sh next to the Skills panel's per-workspace inventory](https://raw.githubusercontent.com/silo-code/silo-extensions/skills-manager@v0.1.2/skills-manager/assets/browse-and-inventory.png)
 
 ## What you get
 
@@ -10,7 +10,7 @@ A [Silo](https://github.com/silo-code/silo) extension for [Agent Skills](https:/
 - **Browse skills.sh from a dock sheet** — trending / hot / all-time / installed, or search across skills.sh's full catalog, without a browser tab pulling you out of Silo
 - **Rich detail pages** — install counts, an `Official` badge for maintainer-published skills, and a full summary before you commit to installing anything
 
-  ![A skill's detail page: install count, an Official badge, a summary, and the one-liner install command](https://raw.githubusercontent.com/silo-code/silo-extensions/skills-manager@v0.1.1/skills-manager/assets/skill-detail.png)
+  ![A skill's detail page: install count, an Official badge, a summary, and the one-liner install command](https://raw.githubusercontent.com/silo-code/silo-extensions/skills-manager@v0.1.2/skills-manager/assets/skill-detail.png)
 
 - **One-click install, project or user scope** — copies (and can run) the exact `npx skills add` command for you, with a checkbox to target user scope instead of the current workspace
 - **Uninstall the same way** — no dropping to a terminal to remember the right flags
