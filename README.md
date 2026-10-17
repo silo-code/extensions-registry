@@ -26,7 +26,7 @@ a commit — `git log` is the audit log.
 
 | Path                  | What                                                            | Written by      |
 | --------------------- | --------------------------------------------------------------- | --------------- |
-| `extensions/<id>.json`| Registrations (id, repo binding, description, categories)       | PRs (auto-merged) |
+| `extensions/<id>.json`| Registrations (id, repo binding, description, categories, optional `status: "removed"` for retired extensions) | PRs (auto-merged) |
 | `versions/<id>.json`  | Append-only version logs (tarball URL, **sha256 pin**, permissions, provenance, downloads) | CI only |
 | `readmes/<id>.md`     | READMEs extracted from the newest tarball at ingest              | CI only         |
 | `advisories.json`     | Kill-switch feed (`warn` / `disable`), polled by the app        | Maintainers     |

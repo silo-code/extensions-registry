@@ -43,6 +43,12 @@ test("buildEntry handles no versions and unavailable repos", () => {
   assert.equal(entry.unavailableSince, "2026-07-01T00:00:00Z");
 });
 
+test("buildEntry marks a retired extension as removed even if the repo is still available", () => {
+  const retired = { ...reg, status: "removed" };
+  const entry = buildEntry(retired, { repoAvailable: true, versions: [version("0.3.0")] });
+  assert.equal(entry.status, "removed");
+});
+
 test("buildEntry prefers the manifest display name, falling back to a title-cased id", () => {
   const withName = buildEntry(reg, { repoAvailable: true, versions: [version("1.0.0", { name: "Weather Pro" })] });
   assert.equal(withName.name, "Weather Pro");
