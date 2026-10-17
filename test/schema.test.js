@@ -53,6 +53,17 @@ test("registration rejects squatting", () => {
   assert.ok(errors.some((e) => e.includes('publisher "microsoft"')));
 });
 
+test("registration accepts status: removed and rejects other status values", () => {
+  assert.deepEqual(
+    validateRegistration({ ...goodReg, status: "removed" }, { filename: "acme.weather.json", config }),
+    [],
+  );
+  assert.ok(
+    validateRegistration({ ...goodReg, status: "active" }, { filename: "acme.weather.json", config })
+      .some((e) => e.includes("status must be")),
+  );
+});
+
 test("registration accepts an optional path and rejects an unsafe one", () => {
   assert.deepEqual(
     validateRegistration({ ...goodReg, path: "weather" }, { filename: "acme.weather.json", config }),

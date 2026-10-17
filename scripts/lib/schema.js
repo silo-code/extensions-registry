@@ -79,7 +79,11 @@ export function validateRegistration(reg, { filename, config }) {
     }
   }
 
-  const known = new Set(["id", "repo", "description", "categories", "addedAt", "path"]);
+  if (reg.status !== undefined && reg.status !== "removed") {
+    errors.push(`status must be "removed" if set; got ${JSON.stringify(reg.status)}`);
+  }
+
+  const known = new Set(["id", "repo", "description", "categories", "addedAt", "path", "status"]);
   for (const key of Object.keys(reg)) {
     if (!known.has(key)) errors.push(`unknown field "${key}"`);
   }
