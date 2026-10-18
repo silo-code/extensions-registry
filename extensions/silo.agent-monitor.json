@@ -1,11 +1,12 @@
 {
   "id": "silo.agent-monitor",
   "repo": "silo-code/silo-extensions",
-  "description": "At-a-glance agent status in the Workspaces panel: rows for coding agents that are working or finished and need attention, cleared when you view the terminal.",
+  "description": "Retired: agent status is now built into the Silo host app. This extension is no longer needed and should not be installed.",
   "categories": [
     "agent-tools",
     "monitoring"
   ],
   "addedAt": "2026-07-13",
-  "path": "agent-monitor"
+  "path": "agent-monitor",
+  "status": "removed"
 }

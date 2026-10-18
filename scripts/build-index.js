@@ -32,7 +32,7 @@ export function titleFromId(id) {
 export function buildEntry(reg, record) {
   const versions = record?.versions ?? [];
   const latest = versions.find((v) => !v.yanked) ?? null;
-  const status = record?.repoAvailable === false ? "unavailable" : "active";
+  const status = reg.status === "removed" ? "removed" : record?.repoAvailable === false ? "unavailable" : "active";
   return {
     id: reg.id,
     name: latest?.name || titleFromId(reg.id),
