@@ -2,7 +2,7 @@
 
 Flag any tab in [Silo](https://github.com/silo-code/silo) — an editor, a terminal, a dock panel — to come back to later, **with a reason attached**.
 
-![The Follow-ups view in the Navigator, grouped by label, next to a green-tinted terminal tab](https://raw.githubusercontent.com/silo-code/silo-extensions/follow-ups@v0.3.0/follow-ups/assets/hero.png)
+![The Follow-ups view in the Navigator, grouped by label, next to a green-tinted terminal tab](https://raw.githubusercontent.com/silo-code/silo-extensions/follow-ups@v0.3.1/follow-ups/assets/hero.png)
 
 You know the feeling: fifteen tabs open across four workspaces, and you can't remember which one you were waiting on a review for, which one is blocked, and which one you just meant to read. Pinning doesn't help — a pinned tab looks exactly like every other pinned tab.
 
@@ -14,7 +14,7 @@ A follow-up is a **color and a name**. "Blocked." "Needs review." "In progress."
 - **Tint you can actually see** — the flagged tab washes in your label's color and the title takes it too, so eight flagged tabs no longer look identical.
 - **One list, every workspace** — the Follow-ups view in the Navigator shows everything you've flagged across every open workspace. Group it by label or by workspace, click a row to jump straight to that tab, right-click to relabel, note, or clear it without leaving the list.
 - **Notes** — a line of free text per follow-up. "Waiting on Ana's reply." It shows up on the row and in the tab's menu, so the reason survives longer than your memory of it does.
-- **A count where you're already looking** — each workspace gets a single status row ("3 follow-ups") with how long ago the newest one was flagged.
+- **A count where you're already looking** — each workspace gets a single line in the Workspaces panel ("3 follow-ups"), opening with a dot per label in use.
 - **Right-click anywhere** — Mark, Clear, and Follow-up note live on every editor, terminal, and dock panel tab's context menu, so you never have to hunt for the button.
 - **Keyboard-driven if you want it** — bind any of the four commands and they act on whatever tab you're looking at.
 - **It remembers** — follow-ups survive a restart. Close the tab and the flag goes with it; nothing to clean up.
@@ -84,4 +84,4 @@ npm run typecheck
 npm test             # unit tests
 ```
 
-`src/lib/` is pure and imports the SDK for types only, so the unit tests never load the SDK runtime. `src/ui/` holds the React components. `src/index.tsx` is wiring: registrations, binders, and status rows.
+`src/lib/` is pure and imports the SDK for types only, so the unit tests never load the SDK runtime. `src/ui/` holds the React components. `src/index.tsx` is wiring: registrations, binders, and panel sections.
