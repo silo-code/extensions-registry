@@ -1,0 +1,12 @@
+{
+  "id": "silo.tasks",
+  "repo": "silo-code/silo-extensions",
+  "description": "A task list per workspace plus a personal one, in a side panel next to your code — no tracker to sign into, nothing written into a repo, and plain JSONL your coding agent can read and append to.",
+  "categories": [
+    "productivity",
+    "side-panel",
+    "agent-tools"
+  ],
+  "addedAt": "2026-10-18",
+  "path": "tasks"
+}
