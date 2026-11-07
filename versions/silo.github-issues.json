@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.0",
+      "tag": "github-issues@v0.2.0",
+      "name": "GitHub Issues",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-issues%40v0.2.0/silo-extensions-github-issues-0.2.0.tgz",
+      "mirrorUrl": null,
+      "sha256": "bbdf401d70e75d245b1b4092023a85da22e201c10c89e79ea558244646a07057",
+      "size": 103660,
+      "engine": "^0.34.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-11-07T19:00:54Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
       "version": "0.1.6",
       "tag": "github-issues@v0.1.6",
       "name": "GitHub Issues",
@@ -17,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-09-08T14:04:20Z",
-      "downloads": 319,
+      "downloads": 321,
       "yanked": null
     },
     {
@@ -35,7 +53,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-31T19:41:34Z",
-      "downloads": 55,
+      "downloads": 56,
       "yanked": null
     },
     {
@@ -53,7 +71,7 @@
       "permissionsWidened": true,
       "provenance": "none",
       "publishedAt": "2026-08-25T21:20:59Z",
-      "downloads": 44,
+      "downloads": 45,
       "yanked": null
     },
     {
@@ -69,7 +87,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-21T20:10:59Z",
-      "downloads": 127,
+      "downloads": 128,
       "yanked": null
     },
     {
@@ -85,7 +103,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-27T13:56:23Z",
-      "downloads": 466,
+      "downloads": 467,
       "yanked": null
     },
     {
@@ -103,10 +121,10 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-26T14:40:05Z",
-      "downloads": 12,
+      "downloads": 13,
       "yanked": null
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:34.078Z"
+  "lastCheckedAt": "2026-11-07T22:13:01.252Z"
 }

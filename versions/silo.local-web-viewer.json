@@ -17,7 +17,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-22T15:45:23Z",
-      "downloads": 1080,
+      "downloads": 1082,
       "yanked": null
     },
     {
@@ -35,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-14T16:24:43Z",
-      "downloads": 105,
+      "downloads": 106,
       "yanked": null
     },
     {
@@ -51,7 +51,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-12T13:46:01Z",
-      "downloads": 22,
+      "downloads": 23,
       "yanked": null,
       "tag": "local-web-viewer@v0.1.4",
       "name": "Local Web Viewer"
@@ -67,7 +67,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-26T21:18:50Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null,
       "tag": "local-web-viewer@v0.1.3"
     },
@@ -82,7 +82,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-25T14:59:34Z",
-      "downloads": 1,
+      "downloads": 3,
       "yanked": null,
       "tag": "local-web-viewer@v0.1.2"
     },
@@ -97,11 +97,11 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-21T14:58:32Z",
-      "downloads": 2,
+      "downloads": 3,
       "yanked": null,
       "tag": "local-web-viewer@v0.1.1"
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:36.028Z"
+  "lastCheckedAt": "2026-11-07T22:13:09.254Z"
 }

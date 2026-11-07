@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.0",
+      "tag": "github-prs@v0.2.0",
+      "name": "GitHub Pull Requests",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/github-prs%40v0.2.0/silo-extensions-github-prs-0.2.0.tgz",
+      "mirrorUrl": null,
+      "sha256": "7e8735989a244cf1aa6bcba73b18f6f84d6f8a3f62960990c60805f27dc304a5",
+      "size": 189657,
+      "engine": "^0.34.0",
+      "permissions": [
+        "process"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-11-07T19:00:56Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
       "version": "0.1.17",
       "tag": "github-prs@v0.1.17",
       "name": "GitHub Pull Requests",
@@ -17,7 +35,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-31T19:41:38Z",
-      "downloads": 375,
+      "downloads": 377,
       "yanked": null
     },
     {
@@ -35,7 +53,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-27T22:10:05Z",
-      "downloads": 20,
+      "downloads": 21,
       "yanked": null
     },
     {
@@ -53,7 +71,7 @@
       "permissionsWidened": true,
       "provenance": "none",
       "publishedAt": "2026-08-25T21:21:01Z",
-      "downloads": 29,
+      "downloads": 30,
       "yanked": null
     },
     {
@@ -69,7 +87,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-21T20:11:01Z",
-      "downloads": 126,
+      "downloads": 127,
       "yanked": null
     },
     {
@@ -85,7 +103,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-06T12:35:20Z",
-      "downloads": 359,
+      "downloads": 360,
       "yanked": null
     },
     {
@@ -101,7 +119,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-02T14:51:57Z",
-      "downloads": 40,
+      "downloads": 41,
       "yanked": null
     },
     {
@@ -117,7 +135,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-01T13:54:28Z",
-      "downloads": 15,
+      "downloads": 16,
       "yanked": null
     },
     {
@@ -133,7 +151,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-01T13:46:56Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -149,7 +167,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-27T13:56:26Z",
-      "downloads": 53,
+      "downloads": 54,
       "yanked": null
     },
     {
@@ -167,7 +185,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-25T14:12:23Z",
-      "downloads": 25,
+      "downloads": 26,
       "yanked": null
     },
     {
@@ -185,7 +203,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-25T00:30:50Z",
-      "downloads": 8,
+      "downloads": 9,
       "yanked": null
     },
     {
@@ -203,7 +221,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-21T16:37:05Z",
-      "downloads": 42,
+      "downloads": 43,
       "yanked": null
     },
     {
@@ -221,7 +239,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-19T14:16:07Z",
-      "downloads": 25,
+      "downloads": 26,
       "yanked": null
     },
     {
@@ -239,7 +257,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-18T15:10:01Z",
-      "downloads": 14,
+      "downloads": 15,
       "yanked": null
     },
     {
@@ -257,7 +275,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-18T15:04:38Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -275,7 +293,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-18T13:37:52Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -293,10 +311,10 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-17T16:04:26Z",
-      "downloads": 10,
+      "downloads": 11,
       "yanked": null
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:35.094Z"
+  "lastCheckedAt": "2026-11-07T22:13:05.740Z"
 }

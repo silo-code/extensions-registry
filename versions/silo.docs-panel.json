@@ -3,6 +3,24 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.0",
+      "tag": "docs-panel@v0.2.0",
+      "name": "Documents Side Panel",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.2.0/silo-extensions-docs-panel-0.2.0.tgz",
+      "mirrorUrl": null,
+      "sha256": "3ab70386f933ad332a3d025b612800694c781f5468f7b5b2a9d664587b1e0c63",
+      "size": 12163,
+      "engine": "^0.46.0",
+      "permissions": [
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-11-07T19:00:50Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
       "version": "0.1.5",
       "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/docs-panel%40v0.1.5/silo-extensions-docs-panel-0.1.5.tgz",
       "mirrorUrl": null,
@@ -15,7 +33,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-08T18:22:12Z",
-      "downloads": 1209,
+      "downloads": 1211,
       "yanked": null,
       "tag": "docs-panel@v0.1.5",
       "name": "Documents Side Panel"
@@ -33,7 +51,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-06T12:48:41Z",
-      "downloads": 2,
+      "downloads": 3,
       "yanked": null,
       "tag": "docs-panel@v0.1.4"
     },
@@ -50,7 +68,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-02T15:58:41Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null,
       "tag": "docs-panel@v0.1.3"
     },
@@ -67,7 +85,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-28T04:04:54Z",
-      "downloads": 2,
+      "downloads": 3,
       "yanked": null,
       "tag": "docs-panel@v0.1.2"
     },
@@ -84,11 +102,11 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-19T18:01:35Z",
-      "downloads": 3,
+      "downloads": 4,
       "yanked": null,
       "tag": "docs-panel@v0.1.1"
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:31.193Z"
+  "lastCheckedAt": "2026-11-07T22:12:53.336Z"
 }

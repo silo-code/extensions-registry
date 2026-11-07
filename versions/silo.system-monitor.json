@@ -3,6 +3,25 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.4.0",
+      "tag": "system-monitor@v0.4.0",
+      "name": "System Monitor",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/system-monitor%40v0.4.0/silo-extensions-system-monitor-0.4.0.tgz",
+      "mirrorUrl": null,
+      "sha256": "d4ad1cd00d7dc590d9685b6b0cc48c5b5f98d15826b8a66c64a228d926ace3c6",
+      "size": 27330,
+      "engine": "^0.34.0",
+      "permissions": [
+        "process",
+        "fs:read"
+      ],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-11-07T19:01:02Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
       "version": "0.3.5",
       "tag": "system-monitor@v0.3.5",
       "name": "System Monitor",
@@ -18,7 +37,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-27T22:10:08Z",
-      "downloads": 407,
+      "downloads": 409,
       "yanked": null
     },
     {
@@ -37,7 +56,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-31T17:36:18Z",
-      "downloads": 592,
+      "downloads": 593,
       "yanked": null
     },
     {
@@ -56,7 +75,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-19T14:16:09Z",
-      "downloads": 139,
+      "downloads": 140,
       "yanked": null
     },
     {
@@ -75,7 +94,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-16T12:53:26Z",
-      "downloads": 45,
+      "downloads": 46,
       "yanked": null
     },
     {
@@ -94,7 +113,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-16T12:23:38Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -113,7 +132,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-15T15:29:22Z",
-      "downloads": 13,
+      "downloads": 14,
       "yanked": null
     },
     {
@@ -132,7 +151,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-15T01:51:43Z",
-      "downloads": 8,
+      "downloads": 9,
       "yanked": null
     },
     {
@@ -151,7 +170,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-14T20:57:14Z",
-      "downloads": 4,
+      "downloads": 5,
       "yanked": null
     },
     {
@@ -170,7 +189,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-14T20:20:06Z",
-      "downloads": 2,
+      "downloads": 3,
       "yanked": null
     },
     {
@@ -189,7 +208,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-13T22:32:17Z",
-      "downloads": 12,
+      "downloads": 13,
       "yanked": null
     },
     {
@@ -208,7 +227,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-13T22:22:49Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -227,7 +246,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-13T20:00:40Z",
-      "downloads": 6,
+      "downloads": 7,
       "yanked": null
     },
     {
@@ -244,7 +263,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-02T13:48:15Z",
-      "downloads": 11,
+      "downloads": 12,
       "yanked": null,
       "tag": "system-monitor@v0.2.2",
       "name": "System Monitor"
@@ -263,7 +282,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-28T17:09:27Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null,
       "tag": "system-monitor@v0.2.1"
     },
@@ -278,7 +297,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-28T04:58:25Z",
-      "downloads": 3,
+      "downloads": 4,
       "yanked": null,
       "tag": "system-monitor@v0.1.2"
     },
@@ -293,11 +312,11 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-06-28T01:01:38Z",
-      "downloads": 3,
+      "downloads": 4,
       "yanked": null,
       "tag": "system-monitor@v0.1.1"
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:37.996Z"
+  "lastCheckedAt": "2026-11-07T22:13:14.940Z"
 }

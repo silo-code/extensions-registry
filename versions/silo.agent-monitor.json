@@ -15,7 +15,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-27T22:10:00Z",
-      "downloads": 389,
+      "downloads": 391,
       "yanked": null
     },
     {
@@ -31,7 +31,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-24T20:22:55Z",
-      "downloads": 68,
+      "downloads": 69,
       "yanked": null
     },
     {
@@ -47,7 +47,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-21T20:11:28Z",
-      "downloads": 102,
+      "downloads": 103,
       "yanked": null
     },
     {
@@ -63,7 +63,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-21T14:43:23Z",
-      "downloads": 6,
+      "downloads": 7,
       "yanked": null
     },
     {
@@ -79,7 +79,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-17T19:21:47Z",
-      "downloads": 111,
+      "downloads": 112,
       "yanked": null
     },
     {
@@ -95,7 +95,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-14T12:41:04Z",
-      "downloads": 105,
+      "downloads": 106,
       "yanked": null
     },
     {
@@ -111,7 +111,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-09T14:44:25Z",
-      "downloads": 86,
+      "downloads": 87,
       "yanked": null
     },
     {
@@ -127,7 +127,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-07T04:47:18Z",
-      "downloads": 51,
+      "downloads": 52,
       "yanked": null
     },
     {
@@ -143,7 +143,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-05T17:05:20Z",
-      "downloads": 13,
+      "downloads": 14,
       "yanked": null
     },
     {
@@ -159,7 +159,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-08-04T17:45:45Z",
-      "downloads": 11,
+      "downloads": 12,
       "yanked": null
     },
     {
@@ -175,7 +175,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-31T19:58:09Z",
-      "downloads": 43,
+      "downloads": 44,
       "yanked": null
     },
     {
@@ -191,7 +191,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-31T17:36:13Z",
-      "downloads": 3,
+      "downloads": 4,
       "yanked": null
     },
     {
@@ -207,7 +207,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-21T17:07:07Z",
-      "downloads": 114,
+      "downloads": 115,
       "yanked": null
     },
     {
@@ -223,7 +223,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-19T14:16:01Z",
-      "downloads": 25,
+      "downloads": 26,
       "yanked": null
     },
     {
@@ -239,7 +239,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-18T14:47:28Z",
-      "downloads": 15,
+      "downloads": 16,
       "yanked": null
     },
     {
@@ -255,7 +255,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-18T13:38:43Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -271,7 +271,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-16T17:34:59Z",
-      "downloads": 27,
+      "downloads": 28,
       "yanked": null
     },
     {
@@ -287,7 +287,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-16T15:02:21Z",
-      "downloads": 1,
+      "downloads": 2,
       "yanked": null
     },
     {
@@ -303,7 +303,7 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-14T16:12:13Z",
-      "downloads": 28,
+      "downloads": 29,
       "yanked": null
     },
     {
@@ -317,12 +317,12 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-07-08T17:40:33Z",
-      "downloads": 20,
+      "downloads": 21,
       "yanked": null,
       "tag": "agent-monitor@v0.1.1",
       "name": "Agent Monitor"
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:30.084Z"
+  "lastCheckedAt": "2026-11-07T22:12:52.229Z"
 }

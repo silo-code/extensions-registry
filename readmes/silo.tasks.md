@@ -2,7 +2,7 @@
 
 A task list that lives in [Silo](https://github.com/silo-code/silo), right next to the code — **no tracker to sign into, and nothing written into your repo**.
 
-![The Tasks panel beside an open editor: the workspace's list, filter dropdowns, and the quick-add box docked at the bottom](https://raw.githubusercontent.com/silo-code/silo-extensions/tasks@v0.1.1/tasks/assets/hero.png)
+![The Tasks panel beside an open editor: the workspace's list, filter dropdowns, and the quick-add box docked at the bottom](https://raw.githubusercontent.com/silo-code/silo-extensions/tasks@v0.2.0/tasks/assets/hero.png)
 
 You know what you meant to do next. It's in a scratch file, or a sticky note, or a `TODO` you'll never grep for again. Putting it in Jira feels absurd — it's a note to yourself, not a ticket. So it stays in your head, and then it doesn't.
 

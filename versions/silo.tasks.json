@@ -3,6 +3,22 @@
   "repo": "silo-code/silo-extensions",
   "versions": [
     {
+      "version": "0.2.0",
+      "tag": "tasks@v0.2.0",
+      "name": "Tasks",
+      "tarballUrl": "https://github.com/silo-code/silo-extensions/releases/download/tasks%40v0.2.0/silo-extensions-tasks-0.2.0.tgz",
+      "mirrorUrl": null,
+      "sha256": "a2ab76fba9feb284f5d10135ba8f9dd394a5af33424ad9a02db8ae55b1929096",
+      "size": 42787,
+      "engine": "^0.65.0",
+      "permissions": [],
+      "permissionsWidened": false,
+      "provenance": "none",
+      "publishedAt": "2026-11-07T19:01:04Z",
+      "downloads": 1,
+      "yanked": null
+    },
+    {
       "version": "0.1.1",
       "tag": "tasks@v0.1.1",
       "name": "Tasks",
@@ -15,10 +31,10 @@
       "permissionsWidened": false,
       "provenance": "none",
       "publishedAt": "2026-10-18T15:07:40Z",
-      "downloads": 99,
+      "downloads": 101,
       "yanked": null
     }
   ],
   "repoAvailable": true,
-  "lastCheckedAt": "2026-11-07T18:13:39.010Z"
+  "lastCheckedAt": "2026-11-07T22:13:19.225Z"
 }
